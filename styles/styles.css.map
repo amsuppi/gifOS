@@ -1,9 +1,10 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAUA,AEVA,IFUI,CACA,UAAU,CEXL;EACL,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,iDAAiD;EACnE,UAAU,EAAE,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CDKH,OAAO;ECJzB,OAAO,EAAE,GAAG;EACZ,SAAS,EAAE,IAAI;EACf,KAAK,EDNM,OAAO;ECOlB,cAAc,EAAE,CAAC;CACpB;;AFJD,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,GAAG;EACX,MAAM,EAAE,GAAG;EACX,OAAO,EAAE,GAAG;CACX",
     "sources": [
         "styles.scss",
-        "_variables/_colors.scss"
+        "_variables/_colors.scss",
+        "_variables/_barraTop.scss"
     ],
     "names": [],
     "file": "styles.css"

@@ -1,0 +1,16 @@
+@import '_variables/_colors.scss';
+
+*{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    }
+body{
+    .barra-top{
+        width: 100%;
+        background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+        box-shadow: 0 1px 0 0 $color-borderInput;
+    }
+
+
+}

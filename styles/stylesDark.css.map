@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,GAAG;EACX,MAAM,EAAE,GAAG;EACX,OAAO,EAAE,GAAG;CACX;;AACL,AACI,IADA,CACA,UAAU,CAAA;EACN,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,iDAAiD;EACnE,UAAU,EAAE,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CCJP,OAAO;CDKxB",
+    "sources": [
+        "stylesDark.scss",
+        "_variables/_colors.scss"
+    ],
+    "names": [],
+    "file": "stylesDark.css"
+}

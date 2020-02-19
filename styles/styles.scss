@@ -1,2 +1,17 @@
 
 @import '_variables/_colors.scss';
+@import '_variables/_barraTop.scss';
+
+*{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    }
+
+body{
+    .barra-top{
+        @extend %barraTop;
+    }
+
+
+}
