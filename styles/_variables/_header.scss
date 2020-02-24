@@ -1,0 +1,18 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    .crear-gifOS{
+        @extend %btnRosa;
+    }
+    .button-dropdown{
+        @extend %btnRosa;
+    }
+
+    .f-dropdown{
+    display: none;
+    }
+}
+

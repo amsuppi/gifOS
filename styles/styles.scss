@@ -1,6 +1,8 @@
 
 @import '_variables/_colors.scss';
 @import '_variables/_barraTop.scss';
+@import '_variables/_header.scss';
+@import '_variables/_buttons.scss';
 
 *{
     border: 0px;
@@ -12,6 +14,4 @@ body{
     .barra-top{
         @extend %barraTop;
     }
-
-
 }

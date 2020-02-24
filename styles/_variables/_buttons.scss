@@ -1,0 +1,6 @@
+%btnRosa{
+    background-color: $color-button;
+    border: solid 1px $color-borderButton;
+    box-shadow: inset -1px -1px 0 0 $color-shadow, inset 1px 1px 0 0 $color-white;
+    padding: 5px;
+}
