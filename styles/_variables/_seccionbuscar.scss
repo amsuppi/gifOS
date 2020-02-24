@@ -1,0 +1,24 @@
+.section-buscar {
+    margin: 20px 50px 0px 50px;
+    background-color: $color-gray;
+    box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
+    height: 100px;
+    
+
+
+    input {
+        background: $color-white;
+        border: 1px solid $color-borderDarkGray;
+        box-shadow: inset -2px -2px 0 0 $color-gray, inset 2px 2px 0 0 $color-borderButton;
+        margin: 20px 0px 20px 10px;
+        height: 38px;
+        padding-left: 10px;
+        width: 90%;
+        
+    }
+
+    button{
+        @extend %btnGris;
+        display: inline;
+    }
+}

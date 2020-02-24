@@ -3,6 +3,9 @@
 @import '_variables/_barraTop.scss';
 @import '_variables/_header.scss';
 @import '_variables/_buttons.scss';
+@import '_variables/_seccionbuscar.scss';
+@import '_variables/_titles.scss';
+@import '_variables/_seccionsugerencias.scss';
 
 *{
     border: 0px;
@@ -11,6 +14,7 @@
     }
 
 body{
+    background-color: $color-backgrund;
     .barra-top{
         @extend %barraTop;
     }

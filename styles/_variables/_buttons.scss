@@ -1,6 +1,23 @@
-%btnRosa{
+%btnRosa {
     background-color: $color-button;
     border: solid 1px $color-borderButton;
     box-shadow: inset -1px -1px 0 0 $color-shadow, inset 1px 1px 0 0 $color-white;
     padding: 5px;
+    font-family: ChakraPetch-Regular;
+    font-size: 16px;
+    color: $color-borderButton;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+    text-decoration: none;
+}
+
+%btnGris {
+    background: $color-gray;
+    border: 1px solid $color-borderDarkGray;
+    box-shadow: inset -1px -1px 0 0 $color-lightgray, inset 1px 1px 0 0 $color-white;
+    height: 30px;
+    padding: 5px;
+    vertical-align: middle;
+    align-items: center;
 }

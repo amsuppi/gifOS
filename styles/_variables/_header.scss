@@ -1,18 +1,25 @@
-header{
+header {
     display: flex;
     justify-content: space-between;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 20px 50px 0px 50px;
+    align-items: center;
 
-    .crear-gifOS{
-        @extend %btnRosa;
-    }
-    .button-dropdown{
+    .crear-gifOS {
         @extend %btnRosa;
     }
 
-    .f-dropdown{
-    display: none;
+    .button-dropdown {
+        @extend %btnRosa;
+    }
+
+    .lnk-gifOS {
+        font-size: 16px;
+        color: $color-borderButton;
+        letter-spacing: 0;
+        line-height: 18px;
+    }
+
+    .f-dropdown {
+        display: none;
     }
 }
-
