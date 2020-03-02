@@ -9,17 +9,17 @@ body{
             box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
         }
         .barratop-sugerencias{
-            @extend %barraTop;
+            @extend %barraTopDark;
             display: flex;
             justify-content: space-between;
             padding-left: 5px;
             padding-right: 5px;
         }
         .close{
-          @extend %botonCerrar;
+          @extend %botonCerrarDark;
         }
         .vermas-sugerencias{
-            @extend %btnVerSugerencias;
+            @extend %btnVerSugerenciasDark;
             padding: 5px;
             margin: 10px;
         }

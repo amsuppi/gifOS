@@ -1,0 +1,18 @@
+.tendencias{
+    margin: 20px 50px 30px 50px;
+
+    .contenedor-gif{
+        background-color: red;
+        width: 25%;
+        height: 256px;
+        box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
+
+        .barra-bottom{
+            @extend %barraTopDark;
+            align-self: flex-end;
+            align-items: flex-end;
+            -ms-flex-align: end;
+        }
+    }
+   
+}

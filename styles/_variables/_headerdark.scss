@@ -1,0 +1,25 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px 0px 50px;
+    align-items: center;
+
+    .crear-gifOS {
+        @extend %btnFucsia;
+    }
+
+    .button-dropdown {
+        @extend %btnFucsia;
+    }
+
+    .lnk-gifOS {
+        font-size: 16px;
+        color: $color-white;
+        letter-spacing: 0;
+        line-height: 18px;
+    }
+
+    .f-dropdown {
+        display: none;
+    }
+}

@@ -21,3 +21,61 @@
     vertical-align: middle;
     align-items: center;
 }
+%botonCerrar{
+    background-color: $color-gray;
+    box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
+    align-content: center;
+    padding: 5px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+%btnVerSugerencias{
+    background: $color-add;
+border: 1px solid $color-violeta;
+box-shadow: inset -2px -2px 0 0 $color-azul, inset 2px 2px 0 0 $color-white;
+color: $color-white;
+}
+
+/*DARK PARTÇ*/
+
+%btnFucsia {
+    background-color: $color-darkButton;
+    border: solid 1px $color-borderButton;
+    box-shadow: inset -1px -1px 0 0 $color-sadow-dark, inset 1px 1px 0 0 $color-white;
+    padding: 5px;
+    font-family: ChakraPetch-Regular;
+    font-size: 16px;
+    color: $color-white;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+    text-decoration: none;
+}
+%btnGrisDark {
+    background: $color-lightgray;
+    border: 1px solid $color-borderDarkGray;
+    box-shadow: inset -1px -1px 0 0 $color-borderDarkGray, inset 1px 1px 0 0 $color-white;
+    height: 30px;
+    padding: 5px;
+    vertical-align: middle;
+    align-items: center;
+    color: $color-borderDarkGray;
+}
+
+%botonCerrarDark{
+    background-color: $color-lightgray;
+    box-shadow: inset -2px -2px 0 0 $color-borderDarkGray, inset 2px 2px 0 0 $color-white;
+    align-content: center;
+    padding: 5px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+%btnVerSugerenciasDark{
+    background: $color-darkBlue ;
+border: 1px solid $color-violeta;
+box-shadow: inset -2px -2px 0 0 $color-azul, inset 2px 2px 0 0 $color-white;
+color: $color-white;
+}

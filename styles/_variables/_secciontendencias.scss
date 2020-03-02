@@ -1,0 +1,17 @@
+.tendencias{
+    margin: 20px 50px 30px 50px;
+
+    .contenedor-gif{
+        background-color: red;
+        width: 25%;
+        height: 256px;
+
+        .barra-bottom{
+            @extend %barraTop;
+            align-self: flex-end;
+            align-items: flex-end;
+            -ms-flex-align: end;
+        }
+    }
+   
+}

@@ -1,0 +1,181 @@
+@charset "UTF-8";
+body h4, body .sugerencias .barratop-sugerencias, .tendencias .contenedor-gif .barra-bottom, body .barra-top {
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  -webkit-box-shadow: 0 1px 0 0 #110038;
+          box-shadow: 0 1px 0 0 #110038;
+  padding: 5px;
+  font-size: 12px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 50px 0px 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .lnk-gifOS {
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 18px;
+}
+
+header .f-dropdown {
+  display: none;
+}
+
+header .crear-gifOS, header .button-dropdown {
+  background-color: #F7C9F3;
+  border: solid 1px #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  padding: 5px;
+  font-family: ChakraPetch-Regular;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.section-buscar button {
+  background: #E6E6E6;
+  border: 1px solid #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+  height: 30px;
+  padding: 5px;
+  vertical-align: middle;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .sugerencias .close {
+  background-color: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 5px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .sugerencias .vermas-sugerencias {
+  background: #4180F6;
+  border: 1px solid #4C2F99;
+  -webkit-box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+  color: #FFFFFF;
+}
+
+/*DARK PARTÇ*/
+.section-buscar {
+  margin: 20px 50px 0px 50px;
+  background-color: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  height: 100px;
+}
+
+.section-buscar input {
+  background: #FFFFFF;
+  border: 1px solid #808080;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #110038;
+          box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #110038;
+  margin: 20px 0px 20px 10px;
+  height: 38px;
+  padding-left: 10px;
+  width: 90%;
+}
+
+.section-buscar button {
+  display: inline;
+}
+
+body h2 {
+  background: #FFFAFE;
+  border: 1px solid #E6BBE2;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #E6BBE2;
+          box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #E6BBE2;
+  font-family: ChakraPetch-Regular;
+  font-size: 14px;
+  font-weight: normal;
+  color: #110038;
+  padding: 5px;
+  margin-bottom: 10px;
+  letter-spacing: 0;
+}
+
+body .sugerencias {
+  margin: 20px 50px 30px 50px;
+}
+
+body .sugerencias .contenedor-gif {
+  background-color: red;
+  width: 25%;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+body .sugerencias .barratop-sugerencias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+body .sugerencias .vermas-sugerencias {
+  padding: 5px;
+  margin: 10px;
+}
+
+.tendencias {
+  margin: 20px 50px 30px 50px;
+}
+
+.tendencias .contenedor-gif {
+  background-color: red;
+  width: 25%;
+  height: 256px;
+}
+
+.tendencias .contenedor-gif .barra-bottom {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-align: end;
+          align-items: flex-end;
+  -ms-flex-align: end;
+}
+
+* {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #FFF4FD;
+}
+/*# sourceMappingURL=styles.css.map */
