@@ -6,10 +6,25 @@ header {
 
     .crear-gifOS {
         @extend %btnRosa;
+        &:hover{
+            @extend %hoverRosa;
+        }
+        &:active{
+            @extend %hoverRosa;
+
+        }
     }
 
     .button-dropdown {
         @extend %btnRosa;
+
+        &:hover{
+            @extend %hoverRosa;
+        }
+        &:active{
+            @extend %hoverRosa;
+
+        }
     }
 
     .lnk-gifOS {

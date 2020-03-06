@@ -87,6 +87,14 @@ body .sugerencias .vermas-sugerencias {
 }
 
 /*DARK PARTÇ*/
+header .crear-gifOS:hover, header .crear-gifOS:active, header .button-dropdown:hover, header .button-dropdown:active {
+  border: 1px solid #110038;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+  background-color: #E6BBE2;
+  cursor: pointer;
+}
+
 .section-buscar {
   margin: 20px 50px 0px 50px;
   background-color: #E6E6E6;

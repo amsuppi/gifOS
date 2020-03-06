@@ -79,3 +79,13 @@ border: 1px solid $color-violeta;
 box-shadow: inset -2px -2px 0 0 $color-azul, inset 2px 2px 0 0 $color-white;
 color: $color-white;
 }
+
+// HOVERS
+
+%hoverRosa{
+    border: 1px solid #110038;
+    outline: 1px dotted #110038;
+    outline-offset: -4px;
+    background-color: $color-rosa-oscuro;
+    cursor: pointer;
+}
