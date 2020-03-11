@@ -3,38 +3,71 @@ header {
     justify-content: space-between;
     padding: 20px 50px 0px 50px;
     align-items: center;
-
-    .crear-gifOS {
-        @extend %btnRosa;
-        &:hover{
-            @extend %hoverRosa;
+    .contenedor-buttons{
+        display: flex;
+        .crear-gifOS {
+            @extend %btnRosa;
+            &:hover{
+                @extend %hoverRosa;
+            }
+            &:active{
+                @extend %hoverRosa;
+            }
         }
-        &:active{
-            @extend %hoverRosa;
+        .theme{
+        .botonDrop{
+            background: none;
+            .button-dropdown {
+                @extend %btnRosa;
+                &:hover{
+                    @extend %hoverRosa;
+                }
+                &:active{
+                    @extend %hoverRosa;
+                }
+            }
+            i{
+                @extend %btnRosa;
+                &:hover{
+                    @extend %hoverRosa;
+                }
+                &:active{
+                    @extend %hoverRosa;
+        
+                }
+            }
+        }
 
+        #drop1 {
+            display: none;
+            position: absolute;
+            li{
+                list-style-type: none;
+            }
         }
     }
-
-    .button-dropdown {
-        @extend %btnRosa;
-
-        &:hover{
-            @extend %hoverRosa;
+       
+        .lnk-gifOS {
+            font-size: 16px;
+            color: $color-borderButton;
+            letter-spacing: 0;
+            line-height: 18px;
+            padding: 5px;
+    
+            &:hover{
+                border: 1px dotted $color-borderButton;
+    
+            &:active{
+                color: $color-borderDarkGray;
+                border: none;
+            }
+    
+            
+            }
         }
-        &:active{
-            @extend %hoverRosa;
-
-        }
+    
+        
     }
 
-    .lnk-gifOS {
-        font-size: 16px;
-        color: $color-borderButton;
-        letter-spacing: 0;
-        line-height: 18px;
-    }
-
-    .f-dropdown {
-        display: none;
-    }
+    
 }

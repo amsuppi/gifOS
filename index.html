@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css" id="archivoCss">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,600&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <title>GifOS</title>
 </head>
+
 <body>
 
     <div class="barra-top">
@@ -17,31 +22,40 @@
         <img class="logo" src="assets/gifOF_logo.png" alt="logo">
 
         <div class="contenedor-buttons">
-        <button class="crear-gifOS"><div class="linea-punteada"> Crear Guifos </div></button>
-        <a class="button-dropdown" href="#" data-dropdown="drop1">Elegir tema</a>
-        <ul class="f-dropdown" id="drop1">
-            <li><a href="#">Sailor Day</a></li>
-            <li><a href="#">Sailor Night</a></li>
-        </ul>
-        <a class="lnk-gifOS" href="">Mis Guifos</a>
-    </div>
+            <button class="crear-gifOS">
+                <div class="linea-punteada"> Crear Guifos </div>
+            </button>
+            <div class="theme">
+                <button class="botonDrop" id="dropdown" onclick="dropFunction();">
+                    <a class="button-dropdown">Elegir tema</a>
+                    <i class="fas fa-sort-down"></i>
+                </button>
+                <ul id="drop1">
+                    <li id="opcionRosa" onclick="cambiarEstilos('styles/styles.css')"><a href="#">Sailor Day</a></li>
+                    <li id="opcionAzul" onclick="cambiarEstilos('styles/stylesDark.css')"><a href="#">Sailor Night</a></li>
+                </ul>
+            </div>
+            <a class="lnk-gifOS" href="">Mis Guifos</a>
+        </div>
     </header>
 
     <main>
         <section class="section-buscar">
             <h4>Buscar</h4>
-            <input type="text" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"/>
+            <input type="text" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" />
             <button> <img src="assets/lupa.svg" alt="">Buscar</button>
         </section>
 
         <section class="sugerencias">
             <h2>Hoy te sugerimos:</h2>
             <div class="contenedor-gif">
-               <div class="barratop-sugerencias"> <h3>Titulo</h3>
-                <a href="#" class="close">x</a></div>
+                <div class="barratop-sugerencias">
+                    <h3>Titulo</h3>
+                    <a href="#" class="close">x</a>
+                </div>
                 <video src=""></video>
                 <button class="vermas-sugerencias">Ver Más...</button>
-            </div> 
+            </div>
         </section>
 
         <section class="tendencias">
@@ -53,4 +67,5 @@
     </main>
 
 </body>
+
 </html>

@@ -33,7 +33,7 @@
 
 %btnVerSugerencias{
     background: $color-add;
-border: 1px solid $color-violeta;
+border: 0.5px solid $color-violeta;
 box-shadow: inset -2px -2px 0 0 $color-azul, inset 2px 2px 0 0 $color-white;
 color: $color-white;
 }
@@ -83,9 +83,15 @@ color: $color-white;
 // HOVERS
 
 %hoverRosa{
-    border: 1px solid #110038;
-    outline: 1px dotted #110038;
+    border: 1px solid $color-borderButton;
+    outline: 1px dotted $color-borderButton;
     outline-offset: -4px;
     background-color: $color-rosa-oscuro;
     cursor: pointer;
+}
+
+%hoverAzul{
+    background-color: $color-azul-hover;
+    outline: 1px dotted $color-borderButton;
+    outline-offset: -4px;
 }

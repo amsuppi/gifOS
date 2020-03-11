@@ -6,6 +6,12 @@
         width: 25%;
         height: 256px;
 
+
+        &:hover{
+            outline: 2px dotted $color-borderButton;
+outline-offset: -5px;
+        }
+
         .barra-bottom{
             @extend %barraTop;
             align-self: flex-end;

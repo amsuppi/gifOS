@@ -7,6 +7,7 @@ body{
             background-color: red;
             width: 25%;
             box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
+            
         }
         .barratop-sugerencias{
             @extend %barraTop;
@@ -22,6 +23,10 @@ body{
             @extend %btnVerSugerencias;
             padding: 5px;
             margin: 10px;
+
+            &:hover{
+                @extend %hoverAzul;
+            }
         }
 
     }

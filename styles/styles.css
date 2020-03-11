@@ -23,18 +23,43 @@ header {
           align-items: center;
 }
 
-header .lnk-gifOS {
+header .contenedor-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .contenedor-buttons .theme .botonDrop {
+  background: none;
+}
+
+header .contenedor-buttons .theme #drop1 {
+  display: none;
+  position: absolute;
+}
+
+header .contenedor-buttons .theme #drop1 li {
+  list-style-type: none;
+}
+
+header .contenedor-buttons .lnk-gifOS {
   font-size: 16px;
   color: #110038;
   letter-spacing: 0;
   line-height: 18px;
+  padding: 5px;
 }
 
-header .f-dropdown {
-  display: none;
+header .contenedor-buttons .lnk-gifOS:hover {
+  border: 1px dotted #110038;
 }
 
-header .crear-gifOS, header .button-dropdown {
+header .contenedor-buttons .lnk-gifOS:hover:active {
+  color: #808080;
+  border: none;
+}
+
+header .contenedor-buttons .crear-gifOS, header .contenedor-buttons .theme .botonDrop .button-dropdown, header .contenedor-buttons .theme .botonDrop i {
   background-color: #F7C9F3;
   border: solid 1px #110038;
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
@@ -80,19 +105,25 @@ body .sugerencias .close {
 
 body .sugerencias .vermas-sugerencias {
   background: #4180F6;
-  border: 1px solid #4C2F99;
+  border: 0.5px solid #4C2F99;
   -webkit-box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
   color: #FFFFFF;
 }
 
 /*DARK PARTÇ*/
-header .crear-gifOS:hover, header .crear-gifOS:active, header .button-dropdown:hover, header .button-dropdown:active {
+header .contenedor-buttons .crear-gifOS:hover, header .contenedor-buttons .crear-gifOS:active, header .contenedor-buttons .theme .botonDrop .button-dropdown:hover, header .contenedor-buttons .theme .botonDrop .button-dropdown:active, header .contenedor-buttons .theme .botonDrop i:hover, header .contenedor-buttons .theme .botonDrop i:active {
   border: 1px solid #110038;
   outline: 1px dotted #110038;
   outline-offset: -4px;
   background-color: #E6BBE2;
   cursor: pointer;
+}
+
+body .sugerencias .vermas-sugerencias:hover {
+  background-color: #3A72DB;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
 }
 
 .section-buscar {
@@ -167,6 +198,11 @@ body .sugerencias .vermas-sugerencias {
   background-color: red;
   width: 25%;
   height: 256px;
+}
+
+.tendencias .contenedor-gif:hover {
+  outline: 2px dotted #110038;
+  outline-offset: -5px;
 }
 
 .tendencias .contenedor-gif .barra-bottom {
