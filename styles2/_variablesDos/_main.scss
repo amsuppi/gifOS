@@ -1,0 +1,12 @@
+main{
+    width: 800px;
+    background-color: red;
+    margin: auto;
+
+    .botones{
+
+        .subirgif{
+            @extend %btnRosa;
+        }
+    }
+}

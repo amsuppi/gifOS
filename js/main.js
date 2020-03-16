@@ -1,6 +1,8 @@
 const common = 'styles/styles.css'
 const black = 'styles/stylesDark.css'
 
+// dropdown con opciones para seleccionar dark/light
+
 function dropFunction(){
     var content = document.getElementById("drop1");
 
@@ -11,6 +13,8 @@ function dropFunction(){
     } 
  }
 
+ //opciones de seleccion de dark/light
+
 function cambiarEstilos(id){
     if (id == "opcionRosa"){
         document.getElementById("archivoCss").href = common;
@@ -19,5 +23,7 @@ function cambiarEstilos(id){
     }
 
 }
+
+
 
 
