@@ -1,43 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="styles2/styles.css">
-    <script type="text/javascript" src="js/video.js"></script>
+
+    <!-- <script type="text/javascript" src="js/video.js"></script>-->
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <div class="barra-top">
         ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803
     </div>
     <header>
         <i class="fas fa-arrow-left"></i>
-        <img alt="">
+        <img class="icono" alt="">
     </header>
     <main>
-        <div class="barra-top">
-           Vista previa
-        </div>
 
-        <video src=""></video>
+        <div class="contenedorGris">
+            <div class="barra-top">
+                Vista previa
+            </div>
+            <div class="contTitulo">
+                <img src="assets/windowimg.png" alt="icono para crear tus propios iconos">
+                <h5>Aquí podrás crear tus propios guifos</h5>
+            </div>
 
-        <div class="contenedorButtons">
-            <div class="contador"></div>
-            <button></button>
-            <div class="progress"></div>
-
+            <p>Crear tu guifo es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados.
+                Los pasos para crear tu guifo son:</p>
+            <ul>
+                <li>Dar permisos de acceso a la cámara (sólo por el tiempo de uso)</li>
+                <li>Capturar tu momento guifo</li>
+                <li>Revisar el momento</li>
+                <li>Listo para subir y compartir!</li>
+            </ul>
+            <p>¿Quieres comenzar a crear tu guifo ahora?</p>
 
             <div class="botones">
-                <button>Repetir Captura</button>
-                <button class="subirgif" onclick="getStreamAndRecord()">Subir Guifo</button>
+                <button class="btnCancelar">Cancelar</button>
+                <button class="btnComenzar" onclick="activarCamara()">Comenzar</button>
+
+            </div>
+
+
+        </div>
+
+        <div class="contenedorVideo">
+            <div class="barra-top">
+                Vista previa
+            </div>
+
+            <video src=""></video>
+
+            <div class="contenedorButtons">
+                <div class="contador"></div>
+                <button></button>
+                <div class="progress"></div>
+
+
+                <div class="botones">
+                    <button onclick="grabar();">
+                        <img src="assets/camera.svg" alt="">Capturar</button>
+                    <button>Repetir Captura</button>
+                    <button class="subirgif" id="subirGifo">Subir Guifo</button>
+                </div>
             </div>
         </div>
 
     </main>
 
 
-    
+
 </body>
+
 </html>

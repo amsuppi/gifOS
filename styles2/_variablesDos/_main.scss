@@ -1,7 +1,56 @@
 main{
-    width: 800px;
-    background-color: red;
-    margin: auto;
+    width: 100%;
+    margin-top: 30px;
+
+    .contenedorGris{
+        width: 600px;
+        background: $color-gray;
+        box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
+        margin: auto;
+
+       .contTitulo{
+           display: flex;
+           margin-top: 10px;
+           margin-left: 10px;
+
+           img{
+            margin-right: 10px;
+           }
+           h5{
+               margin-top: 5px;
+           }
+       }
+       p{
+           margin-left: 50px;
+       }
+       ul{
+           margin-left: 50px;
+           margin-top: 10px;
+
+           li{
+               list-style-type: decimal;
+           }
+       }
+       .botones{
+           display: flex;
+           justify-content: end;
+           padding: 10px;
+
+           .btnComenzar{
+               @extend %btnRosa;
+           }
+           .btnCancelar{
+               @extend %btnRosaClaro;
+               margin-right: 5px;
+           }
+       }
+    }
+
+    .contenedorVideo{
+        width: 800px;
+        box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
+        margin: auto;
+    }
 
     .botones{
 

@@ -11,3 +11,16 @@
     line-height: 18px;
     text-decoration: none;
 }
+%btnRosaClaro{
+    background: $color-backgrund;
+    border: 1px solid $color-borderButton;
+    box-shadow: inset -1px -1px 0 0 $color-shadow, inset 1px 1px 0 0 $color-white;
+    padding: 5px;
+    font-family: ChakraPetch-Regular;
+    font-size: 16px;
+    color: $color-borderButton;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+    text-decoration: none;
+}
