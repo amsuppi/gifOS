@@ -1,27 +1,24 @@
-let apiKey = "cq2dHiXUIQsux4tIWZYG7Mj0p0HHzicx"
-var miUrl = fetch("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=cq2dHiXUIQsux4tIWZYG7Mj0p0HHzicx");
-
+var miUrl = "//api.giphy.com/v1/gifs/trending?api_key=NXLRwlrJclD68iUt0t49LYzzurK0KJxq&limit=25&rating=G"
+let apiKey = "NXLRwlrJclD68iUt0t49LYzzurK0KJxq"
 //------------------------------------
- var boton =  document.getElementById("search");
- 
 
-miUrl .then(function(data) { 
-    for (let i = 0; i < data.length; i++) {
-        createImageBitmap(data[i].images.original.url);
-        
-    }
-    console.log(data); 
-    
+fetch (miUrl)
+.then(response => {
+    return response.json();
+}).then(json => {
+    console.log(json);
 });
 
-boton.addEventListener("click", function(){
+
+//search
+/*var boton =  document.getElementById("search");
+
+    boton.addEventListener("click", function(){
     var miInfo = document.getElementById("n2").value;
 
     console.log 
 
 });
-
-
 function getSearchResults(search) {
     const found = fetch('api.giphy.com/v1/gifs/search' + search + '&api_key=' + apiKey)
         .then(response => {
@@ -34,4 +31,4 @@ function getSearchResults(search) {
             return error;
         });
     return found;
-}
+}*/

@@ -1,10 +1,12 @@
+var contenedoreGris = document.getElementById("contenedorGris");
+
 //Activar la camara de la computadora
 function activarCamara() {
     navigator.mediaDevices.getUserMedia({
         audio: false,
         video: {
-            height: {
-                max: 400
+            width: {
+                max: 800
             }
         }
     }).then(function (stream) {
@@ -14,6 +16,10 @@ function activarCamara() {
             video.play();
         }
     })
+    if(video.onloadeddata == true){
+        contenedoreGris.remove();
+    } 
+
 }
 
 

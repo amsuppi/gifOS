@@ -3,6 +3,7 @@ main{
     margin-top: 30px;
 
     .contenedorGris{
+        display: block;
         width: 600px;
         background: $color-gray;
         box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
