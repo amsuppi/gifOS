@@ -1,5 +1,5 @@
 @charset "UTF-8";
-body h4, body .sugerencias .barratop-sugerencias, .tendencias .contenedor-gif .barra-bottom, body .barra-top {
+body h4, body .sugerencias .gif-sugerencias .barratop-sugerencias, .tendencias .contenedor-gif .barra-bottom, body .barra-top {
   background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
   background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
   -webkit-box-shadow: 0 1px 0 0 #110038;
@@ -80,7 +80,7 @@ header .contenedor-buttons .crear-gifOS, header .contenedor-buttons .theme .boto
   color: #808080;
 }
 
-body .sugerencias .close {
+body .sugerencias .gif-sugerencias .close {
   background-color: #B4B4B4;
   -webkit-box-shadow: inset -2px -2px 0 0 #808080, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #808080, inset 2px 2px 0 0 #FFFFFF;
@@ -96,7 +96,7 @@ body .sugerencias .close {
           justify-content: center;
 }
 
-body .sugerencias .vermas-sugerencias {
+body .sugerencias .gif-sugerencias .vermas-sugerencias {
   background: #2E32FB;
   border: 1px solid #4C2F99;
   -webkit-box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
@@ -145,14 +145,23 @@ body .sugerencias {
   margin: 20px 50px 30px 50px;
 }
 
-body .sugerencias .contenedor-gif {
-  background-color: red;
-  width: 25%;
+body .sugerencias .gif-sugerencias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .sugerencias .gif-sugerencias .contenedor-gif {
+  width: 280px;
+  height: 280px;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
 
-body .sugerencias .barratop-sugerencias {
+body .sugerencias .gif-sugerencias .barratop-sugerencias {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,9 +172,17 @@ body .sugerencias .barratop-sugerencias {
   padding-right: 5px;
 }
 
-body .sugerencias .vermas-sugerencias {
+body .sugerencias .gif-sugerencias img {
+  width: 280px;
+  height: 245px;
+  overflow: hidden;
+}
+
+body .sugerencias .gif-sugerencias .vermas-sugerencias {
   padding: 5px;
   margin: 10px;
+  float: bottom;
+  position: absolute;
 }
 
 .tendencias {

@@ -27,6 +27,7 @@ main {
 }
 
 main .contenedorGris {
+  display: block;
   width: 600px;
   background: #E6E6E6;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;

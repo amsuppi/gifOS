@@ -1,5 +1,5 @@
 @charset "UTF-8";
-body h4, body .sugerencias .barratop-sugerencias, .tendencias .contenedor-gif .barra-bottom, body .barra-top {
+body h4, body .sugerencias .gif-sugerencias .barratop-sugerencias, .tendencias .contenedor-gif .barra-bottom, body .barra-top {
   background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
   background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
   -webkit-box-shadow: 0 1px 0 0 #110038;
@@ -87,7 +87,7 @@ header .contenedor-buttons .crear-gifOS, header .contenedor-buttons .theme .boto
           align-items: center;
 }
 
-body .sugerencias .close {
+body .sugerencias .gif-sugerencias .close {
   background-color: #E6E6E6;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
@@ -103,7 +103,7 @@ body .sugerencias .close {
           justify-content: center;
 }
 
-body .sugerencias .vermas-sugerencias {
+body .sugerencias .gif-sugerencias .vermas-sugerencias {
   background: #4180F6;
   border: 0.5px solid #4C2F99;
   -webkit-box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
@@ -120,7 +120,7 @@ header .contenedor-buttons .crear-gifOS:hover, header .contenedor-buttons .crear
   cursor: pointer;
 }
 
-body .sugerencias .vermas-sugerencias:hover {
+body .sugerencias .gif-sugerencias .vermas-sugerencias:hover {
   background-color: #3A72DB;
   outline: 1px dotted #110038;
   outline-offset: -4px;
@@ -167,14 +167,20 @@ body .sugerencias {
   margin: 20px 50px 30px 50px;
 }
 
-body .sugerencias .contenedor-gif {
+body .sugerencias .gif-sugerencias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .sugerencias .gif-sugerencias .contenedor-gif {
   background-color: red;
   width: 25%;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
 
-body .sugerencias .barratop-sugerencias {
+body .sugerencias .gif-sugerencias .barratop-sugerencias {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,7 +191,7 @@ body .sugerencias .barratop-sugerencias {
   padding-right: 5px;
 }
 
-body .sugerencias .vermas-sugerencias {
+body .sugerencias .gif-sugerencias .vermas-sugerencias {
   padding: 5px;
   margin: 10px;
 }
