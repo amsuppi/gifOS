@@ -1,6 +1,9 @@
 let trending = "https://api.giphy.com/v1/gifs/trending?api_key=NXLRwlrJclD68iUt0t49LYzzurK0KJxq&limit=25&rating=G"
 let sugerencias = "https://api.giphy.com/v1/gifs/random?api_key=NXLRwlrJclD68iUt0t49LYzzurK0KJxq&tag=q&rating=G"
+
+
 let apiKey = "NXLRwlrJclD68iUt0t49LYzzurK0KJxq"
+
 //------------------------------------
 
 fetch(sugerencias)
@@ -30,19 +33,15 @@ fetch(trending)
         console.log(json);
 
         for (let i = 0; i < json.data.length; i++) {
-            
+        
             console.log(json.data[i].images.original.url);
-
             var div = document.getElementById("contenedo-tendencias");
-
             var x = document.createElement("img");
-
             div.appendChild(x);
-
             x.src = json.data[i].images.original.url;
-
+            x.className = "img-gif";
+            x.id = "img-gif-tendencias";
         }
-
     })
     .catch(error => {
         return error;
@@ -52,24 +51,45 @@ fetch(trending)
 //----------------------------------------------
 
 //search
-/*var boton =  document.getElementById("search");
 
-    boton.addEventListener("click", function(){
-    var miInfo = document.getElementById("n2").value;
+function llamar(){
+    var valor = document.getElementById("n2").value;
 
-    console.log 
+    var myHeaders = new Headers();
+    
 
-});
-function getSearchResults(search) {
-    const found = fetch('api.giphy.com/v1/gifs/search' + search + '&api_key=' + apiKey)
+        fetch('https://api.giphy.com/v1/gifs/search?' + '&api_key=' + 
+            apiKey + "&q=" + valor + "&limit=25&offset=0&rating=G&lang=es",{
+                method: 'GET',
+                headers: myHeaders
+            })
         .then(response => {
             return response.json();
         })
-        .then(data => {
-            return data;
+        .then(json => {
+            console.log (json);
+
+            for (let i = 0; i < json.data.length; i++) {
+        
+            console.log(json.data[i].images.original.url);
+
+            var div = document.getElementById("contenedo-tendencias");
+            var x = document.createElement("img");
+            div.appendChild(x);
+            x.src = json.data[i].images.original.url;
+            x.className = "img-gif";
+            x.id = "img-gif-search";
+
+            }
         })
         .catch(error => {
             return error;
         });
-    return found;
-}*/
+}
+
+if (llamar() == true){
+    var tend = document.getElementById("img-gif-tendencias");
+    
+
+    tend.removeChild();
+}
