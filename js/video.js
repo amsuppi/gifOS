@@ -22,8 +22,6 @@ function activarCamara() {
 
 }
 
-
-
 // Libreria RTC para grabar video
     function grabar() {
         navigator.mediaDevices.getUserMedia({
