@@ -17,6 +17,8 @@ fetch(sugerencias)
         document.getElementById("contenedo-trending2").src = json.data.images.original.url;
         document.getElementById("contenedo-trending3").src = json.data.images.original.url;
         document.getElementById("contenedo-trending4").src = json.data.images.original.url;
+
+        
         
     })
     .catch(error => {
@@ -74,22 +76,19 @@ function llamar(){
             console.log(json.data[i].images.original.url);
 
             var div = document.getElementById("contenedo-tendencias");
-            var x = document.createElement("img");
-            div.appendChild(x);
-            x.src = json.data[i].images.original.url;
-            x.className = "img-gif";
-            x.id = "img-gif-search";
-
+            var x = document.getElementById("img-gif-tendencias")
+            var y = document.createElement("img");
+            y.src = json.data[i].images.original.url;
+            y.className = "img-gif";
+            y.id = "img-gif-search";
+            div.replaceChild(y, x);
             }
         })
         .catch(error => {
             return error;
         });
+
+        var tend = document.getElementById("img-gif-tendencias");
+
 }
 
-if (llamar() == true){
-    var tend = document.getElementById("img-gif-tendencias");
-    
-
-    tend.removeChild();
-}
