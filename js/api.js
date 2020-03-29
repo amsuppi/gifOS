@@ -18,6 +18,10 @@ fetch(sugerencias)
         document.getElementById("contenedo-trending3").src = json.data.images.original.url;
         document.getElementById("contenedo-trending4").src = json.data.images.original.url;
 
+        var elemento = document.querySelector("h3");
+        var text = document.createTextNode(json.data.images.original.url.string);
+
+        elemento.appendChild(text);
         
         
     })
@@ -82,13 +86,13 @@ function llamar(){
             y.className = "img-gif";
             y.id = "img-gif-search";
             div.replaceChild(y, x);
+
             }
         })
         .catch(error => {
             return error;
         });
 
-        var tend = document.getElementById("img-gif-tendencias");
 
 }
 
