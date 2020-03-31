@@ -6,22 +6,36 @@ let apiKey = "NXLRwlrJclD68iUt0t49LYzzurK0KJxq"
 
 //------------------------------------
 
-fetch(sugerencias)
+fetch(trending)
     .then(response => {
         return response.json();
     })
     .then(json => {
         console.log(json);
    
-        document.getElementById("contenedo-trending").src = json.data.images.original.url;
-        document.getElementById("contenedo-trending2").src = json.data.images.original.url;
-        document.getElementById("contenedo-trending3").src = json.data.images.original.url;
-        document.getElementById("contenedo-trending4").src = json.data.images.original.url;
+        document.getElementById("contenedo-trending").src = json.data[20].images.original.url;
+        document.getElementById("contenedo-trending2").src = json.data[21].images.original.url;
+        document.getElementById("contenedo-trending3").src = json.data[22].images.original.url;
+        document.getElementById("contenedo-trending4").src = json.data[23].images.original.url;
 
-        var elemento = document.querySelector("h3");
-        var text = document.createTextNode(json.data.images.original.url.string);
-
+        var elemento = document.getElementById("title1");
+        var text = document.createTextNode(json.data[20].title);
         elemento.appendChild(text);
+
+        var elemento1 = document.getElementById("title2");
+        var text = document.createTextNode(json.data[21].title);
+        elemento1.appendChild(text);
+
+        var elemento2 = document.getElementById("title3");
+        var text = document.createTextNode(json.data[22].title);
+        elemento2.appendChild(text);
+
+        var elemento3 = document.getElementById("title4");
+        var text = document.createTextNode(json.data[23].title);
+        elemento3.appendChild(text);
+
+        
+        
         
         
     })

@@ -1,39 +1,42 @@
 body {
-
     .sugerencias {
         margin: 20px 50px 30px 50px;
-
         .gif-sugerencias {
             display: flex;
-
-
+            justify-content: space-between;
             .contenedor-gif {
-                background-color: red;
-                width: 25%;
-                box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
-            
+                width: 280px;
+                height: 280px;
+                
             }
-
             .barratop-sugerencias {
                 @extend %barraTop;
                 display: flex;
                 justify-content: space-between;
                 padding-left: 5px;
                 padding-right: 5px;
-            }
 
-            .close {
-                @extend %botonCerrar;
+                .close {
+                    @extend %botonCerrar;
+                }
             }
-
             .vermas-sugerencias {
+                
                 @extend %btnVerSugerencias;
                 padding: 5px;
                 margin: 10px;
+                position: absolute;
+                float: bottom;
+                vertical-align: bottom;
 
                 &:hover {
                     @extend %hoverAzul;
                 }
+            }
+            .gif-sugerencias{
+                width: 280px;
+                height: 260px;
+                box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
             }
 
         }

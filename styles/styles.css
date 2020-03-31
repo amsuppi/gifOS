@@ -1,5 +1,5 @@
 @charset "UTF-8";
-body h4, body .sugerencias .gif-sugerencias .barratop-sugerencias, .tendencias .contenedor-gif .barra-bottom, body .barra-top {
+body h4, body .sugerencias .gif-sugerencias .barratop-sugerencias, body .barra-top {
   background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
   background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
   -webkit-box-shadow: 0 1px 0 0 #110038;
@@ -29,13 +29,27 @@ header .contenedor-buttons {
   display: flex;
 }
 
-header .contenedor-buttons .theme .botonDrop {
-  background: none;
+header .contenedor-buttons .crear-gifOS {
+  margin-right: 5px;
+}
+
+header .contenedor-buttons .theme {
+  margin-right: 5px;
+}
+
+header .contenedor-buttons .theme .botonDrop span {
+  width: 15px;
+}
+
+header .contenedor-buttons .theme .botonDrop span img {
+  margin: auto;
 }
 
 header .contenedor-buttons .theme #drop1 {
   display: none;
   position: absolute;
+  background-color: #E6E6E6;
+  width: 100%;
 }
 
 header .contenedor-buttons .theme #drop1 li {
@@ -48,6 +62,12 @@ header .contenedor-buttons .lnk-gifOS {
   letter-spacing: 0;
   line-height: 18px;
   padding: 5px;
+  text-decoration: none;
+}
+
+header .contenedor-buttons .lnk-gifOS::first-letter {
+  -webkit-text-decoration: underline 1px #110038;
+          text-decoration: underline 1px #110038;
 }
 
 header .contenedor-buttons .lnk-gifOS:hover {
@@ -59,13 +79,12 @@ header .contenedor-buttons .lnk-gifOS:hover:active {
   border: none;
 }
 
-header .contenedor-buttons .crear-gifOS, header .contenedor-buttons .theme .botonDrop .button-dropdown, header .contenedor-buttons .theme .botonDrop i {
+header .contenedor-buttons .crear-gifOS, header .contenedor-buttons .theme .botonDrop {
   background-color: #F7C9F3;
   border: solid 1px #110038;
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
   padding: 5px;
-  font-family: ChakraPetch-Regular;
   font-size: 16px;
   color: #110038;
   letter-spacing: 0;
@@ -87,17 +106,13 @@ header .contenedor-buttons .crear-gifOS, header .contenedor-buttons .theme .boto
           align-items: center;
 }
 
-body .sugerencias .gif-sugerencias .close {
+body .sugerencias .gif-sugerencias .barratop-sugerencias .close {
   background-color: #E6E6E6;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  padding: 5px;
+  width: 15px;
+  height: 15px;
   text-decoration: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -112,7 +127,7 @@ body .sugerencias .gif-sugerencias .vermas-sugerencias {
 }
 
 /*DARK PARTÇ*/
-header .contenedor-buttons .crear-gifOS:hover, header .contenedor-buttons .crear-gifOS:active, header .contenedor-buttons .theme .botonDrop .button-dropdown:hover, header .contenedor-buttons .theme .botonDrop .button-dropdown:active, header .contenedor-buttons .theme .botonDrop i:hover, header .contenedor-buttons .theme .botonDrop i:active {
+header .contenedor-buttons .crear-gifOS:hover, header .contenedor-buttons .crear-gifOS:active, header .contenedor-buttons .theme .botonDrop .button-dropdown:hover, header .contenedor-buttons .theme .botonDrop .button-dropdown:active, header .contenedor-buttons .theme .botonDrop span:hover, header .contenedor-buttons .theme .botonDrop span:active {
   border: 1px solid #110038;
   outline: 1px dotted #110038;
   outline-offset: -4px;
@@ -147,6 +162,13 @@ body .sugerencias .gif-sugerencias .vermas-sugerencias:hover {
 
 .section-buscar button {
   display: inline;
+  text-align: center;
+}
+
+body h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 5px;
 }
 
 body h2 {
@@ -171,13 +193,14 @@ body .sugerencias .gif-sugerencias {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 body .sugerencias .gif-sugerencias .contenedor-gif {
-  background-color: red;
-  width: 25%;
-  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  width: 280px;
+  height: 280px;
 }
 
 body .sugerencias .gif-sugerencias .barratop-sugerencias {
@@ -194,6 +217,16 @@ body .sugerencias .gif-sugerencias .barratop-sugerencias {
 body .sugerencias .gif-sugerencias .vermas-sugerencias {
   padding: 5px;
   margin: 10px;
+  position: absolute;
+  float: bottom;
+  vertical-align: bottom;
+}
+
+body .sugerencias .gif-sugerencias .gif-sugerencias {
+  width: 280px;
+  height: 260px;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
 
 .tendencias {
@@ -201,22 +234,32 @@ body .sugerencias .gif-sugerencias .vermas-sugerencias {
 }
 
 .tendencias .contenedor-gif {
-  background-color: red;
-  width: 25%;
-  height: 256px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /*.barra-bottom {
+            @extend %barraTop;
+            align-self: flex-end;
+            align-items: flex-end;
+            -ms-flex-align: end;
+        }*/
 }
 
-.tendencias .contenedor-gif:hover {
+.tendencias .contenedor-gif .img-gif {
+  width: 280px;
+  height: 280px;
+  margin-bottom: 20px;
+}
+
+.tendencias .contenedor-gif .img-gif:hover {
   outline: 2px dotted #110038;
   outline-offset: -5px;
-}
-
-.tendencias .contenedor-gif .barra-bottom {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  -webkit-box-align: end;
-          align-items: flex-end;
-  -ms-flex-align: end;
 }
 
 * {

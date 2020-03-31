@@ -3,7 +3,6 @@
     border: solid 1px $color-borderButton;
     box-shadow: inset -1px -1px 0 0 $color-shadow, inset 1px 1px 0 0 $color-white;
     padding: 5px;
-    font-family: ChakraPetch-Regular;
     font-size: 16px;
     color: $color-borderButton;
     letter-spacing: 0;
@@ -21,21 +20,21 @@
     vertical-align: middle;
     align-items: center;
 }
-%botonCerrar{
+
+%botonCerrar {
     background-color: $color-gray;
     box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
-    align-content: center;
-    padding: 5px;
+    width: 15px;
+    height: 15px;
     text-decoration: none;
-    display: flex;
     justify-content: center;
 }
 
-%btnVerSugerencias{
+%btnVerSugerencias {
     background: $color-add;
-border: 0.5px solid $color-violeta;
-box-shadow: inset -2px -2px 0 0 $color-azul, inset 2px 2px 0 0 $color-white;
-color: $color-white;
+    border: 0.5px solid $color-violeta;
+    box-shadow: inset -2px -2px 0 0 $color-azul, inset 2px 2px 0 0 $color-white;
+    color: $color-white;
 }
 
 /*DARK PARTÇ*/
@@ -53,6 +52,7 @@ color: $color-white;
     line-height: 18px;
     text-decoration: none;
 }
+
 %btnGrisDark {
     background: $color-lightgray;
     border: 1px solid $color-borderDarkGray;
@@ -64,7 +64,7 @@ color: $color-white;
     color: $color-borderDarkGray;
 }
 
-%botonCerrarDark{
+%botonCerrarDark {
     background-color: $color-lightgray;
     box-shadow: inset -2px -2px 0 0 $color-borderDarkGray, inset 2px 2px 0 0 $color-white;
     align-content: center;
@@ -73,16 +73,17 @@ color: $color-white;
     display: flex;
     justify-content: center;
 }
-%btnVerSugerenciasDark{
-    background: $color-darkBlue ;
-border: 1px solid $color-violeta;
-box-shadow: inset -2px -2px 0 0 $color-azul, inset 2px 2px 0 0 $color-white;
-color: $color-white;
+
+%btnVerSugerenciasDark {
+    background: $color-darkBlue;
+    border: 1px solid $color-violeta;
+    box-shadow: inset -2px -2px 0 0 $color-azul, inset 2px 2px 0 0 $color-white;
+    color: $color-white;
 }
 
 // HOVERS
 
-%hoverRosa{
+%hoverRosa {
     border: 1px solid $color-borderButton;
     outline: 1px dotted $color-borderButton;
     outline-offset: -4px;
@@ -90,7 +91,7 @@ color: $color-white;
     cursor: pointer;
 }
 
-%hoverAzul{
+%hoverAzul {
     background-color: $color-azul-hover;
     outline: 1px dotted $color-borderButton;
     outline-offset: -4px;

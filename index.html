@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/stylesDark.css" id="archivoCss">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="styles/styles.css" id="archivoCss">
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,600&display=swap" rel="stylesheet">
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/api.js"></script>
@@ -29,7 +28,7 @@
             <div class="theme">
                 <button class="botonDrop" id="dropdown" onclick="dropFunction();">
                     <a class="button-dropdown">Elegir tema</a>
-                    <i class="fas fa-sort-down"></i>
+                    <span><img src="assets/dropdown.svg"></span>
                 </button>
                 <ul id="drop1">
                     <li id="opcionRosa" onclick="cambiarEstilos(this.id)"><a href="#">Sailor Day</a></li>
@@ -54,35 +53,36 @@
 
             <div class="contenedor-gif" >
                 <div class="barratop-sugerencias">
-                    <h3></h3>
-                    <a href="#" class="close">x</a>
+                    <h3 id="title1">#</h3>
+                    <a href="#" class="close">X</a>
                 </div>
-                <img id="contenedo-trending">
                 <button class="vermas-sugerencias">Ver Más...</button>
+                <img class="gif-sugerencias" id="contenedo-trending">
             </div>
             <div class="contenedor-gif" >
                 <div class="barratop-sugerencias">
-                    <h3></h3>
-                    <a href="#" class="close">x</a>
+                    <h3 id="title2">#</h3>
+                    <a href="#" class="close">X</a>
                 </div>
-                <img id="contenedo-trending2">
                 <button class="vermas-sugerencias">Ver Más...</button>
+                <img class="gif-sugerencias" id="contenedo-trending2">
             </div>
             <div class="contenedor-gif" >
                 <div class="barratop-sugerencias">
-                    <h3></h3>
-                    <a href="#" class="close">x</a>
+                    <h3 id="title3">#</h3>
+                    <a href="#" class="close">X</a>
                 </div>
-                <img id="contenedo-trending3">
                 <button class="vermas-sugerencias">Ver Más...</button>
+                <img class="gif-sugerencias" id="contenedo-trending3">
             </div>
              <div class="contenedor-gif" >
                 <div class="barratop-sugerencias">
-                    <h3></h3>
-                    <a href="#" class="close">x</a>
+                    <h3 id="title4">#</h3>
+                    <a href="#" class="close">X</a>
                 </div>
-                <img id="contenedo-trending4">
                 <button class="vermas-sugerencias">Ver Más...</button>
+                <img class="gif-sugerencias" id="contenedo-trending4">
+                
             </div>
 
         </div>
@@ -91,7 +91,7 @@
         <section class="tendencias">
             <h2>Tendencias:</h2>
             <div class="contenedor-gif" id="contenedo-tendencias">
-                <div class="barra-bottom">#hashtag</div>
+                <!--<div class="barra-bottom">#hashtag</div>-->
             </div>
         </section>
     </main>
