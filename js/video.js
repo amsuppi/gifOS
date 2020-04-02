@@ -4,6 +4,8 @@ var contenedoreGris = document.getElementById("contenedorGris");
 
 const url = "https://upload.giphy.com/v1/gifsapi_key=NXLRwlrJclD68iUt0t49LYzzurK0KJxq&tag=q&rating=G"
 
+var stream;
+
 //Activar la camara de la computadora
 function activarCamara() {
     navigator.mediaDevices.getUserMedia({
@@ -42,6 +44,8 @@ function grabar() {
         recorder.startRecording();
 
     });
+
+    document.getElementById("contenedorGris").remove();
 }
 
 function stop(blobURL) {
@@ -50,10 +54,9 @@ function stop(blobURL) {
         form.append('file', recorder.getBlob(), blobURL);
 
         console.log(form.get('file'))
-        /*let blob = recorder.getBlob();
-        invokeSaveAsDialog(blob);*/
 
-        fetch("https://upload.giphy.com/v1/gifs?api_key=NXLRwlrJclD68iUt0t49LYzzurK0KJxq&tag=q&rating=G", {
+            
+       fetch("https://upload.giphy.com/v1/gifs?api_key=NXLRwlrJclD68iUt0t49LYzzurK0KJxq&tag=q&rating=G", {
             method: "POST",
             body : form
         }).then(response => {
@@ -61,9 +64,23 @@ function stop(blobURL) {
         }).then(
             json => {
                 console.log (json);
-            }).catch(error => console.error('Error:', error))
-        .then(response => console.log('Success:', json));
+            })
+        .catch(error => console.error('Error:', error))
+
+
+    localStorage.setItem( form , "image/gif");
+
+    var misGifs = localStorage.getItem(form);
+
+    for (let i = 0; i < misGifs.length; i++) {
+
+        console.log(misGifs[i]);
+    }
+
     });
+
+   
 }
+
 
 
