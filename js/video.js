@@ -83,10 +83,10 @@ function stop(blobURL) {
 
                             localStorage.setItem('gif' + json.data.id, JSON.stringify(json));
 
-                            var misGif = localStorage.getItem('gif');
+                            var misGifs = localStorage.getItem('gif');
 
-                            for (let i = 0; i < misGif.length; i++) {
-                                console.log(misGif[i]);
+                            for (let i = 0; i < misGifs.length; i++) {
+                                console.log(misGifs[i]);
                                 }
                     })
                 })
