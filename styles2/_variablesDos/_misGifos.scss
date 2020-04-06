@@ -4,12 +4,18 @@
         background: $color-input;
         border: 1px solid $color-borderInput;
         box-shadow: inset -2px -2px 0 0 $color-gray, inset 2px 2px 0 0 $color-borderInput;
-        font-family: ChakraPetch-Regular;
         font-size: 14px;
         font-weight: normal;
         color: $color-borderButton;
         padding: 5px;
         margin-bottom: 10px;
         letter-spacing: 0;
+    }
+
+    .mis-gifs{
+        width: 280px;
+        height: 280px;
+        overflow: hidden;
+        margin: 10px;
     }
 }

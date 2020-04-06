@@ -1,6 +1,6 @@
 const url = "https://upload.giphy.com/v1/gifsapi_key=NXLRwlrJclD68iUt0t49LYzzurK0KJxq&tag=q&rating=G"
 
-
+let recorder;
 
 //Activar la camara de la computadora
 function activarCamara() {
@@ -10,10 +10,41 @@ function activarCamara() {
     }).then(function (stream) {
         var video = document.querySelector('video');
         video.srcObject = stream;
-        video.onloadeddata = function (e) {
-            video.play();
+        video.play();
 
+        // Libreria RTC para grabar video
+
+        var btnGrabar = document.getElementById("btnCapturar");
+        btnGrabar.addEventListener("click", ()=>{
+
+            navigator.mediaDevices.getUserMedia({
+                video: true
+            }).then(function () {
+                recorder = RecordRTC(stream, {
+                    type: 'gif',
+                    frameRate: 1,
+                    quality: 10,
+                    width: 360,
+                    hidden: 240,
+        
+                    onGifRecordingStarted: function () {
+                        console.log('started')
+                    },
+                });
+                recorder.startRecording();
+        
+                recorder.camera = stream;
+        
+                var btnGrabar = document.getElementById("btnCapturar");
+                var btnListo = document.getElementById("btnListo");
+        
+                btnGrabar.style.display = "none";
+                btnListo.style.display = "block";
+        
+            });
         }
+    )
+
 
         var contenedorVideo = document.getElementById("capturarVideo");
         var contenedorGris = document.getElementById("contenedorGris");
@@ -21,7 +52,10 @@ function activarCamara() {
         contenedorGris.style.display = "none";
         contenedorVideo.style.display = "block";
     })
-}
+
+    
+    }
+
 
 /*function cancelar(){
     var btnCancelar = document.getElementById("cancelar");
@@ -34,36 +68,9 @@ function activarCamara() {
     })
 }*/
 
-// Libreria RTC para grabar video
-function grabar() {
-    navigator.mediaDevices.getUserMedia({
-        video: true,
-    }).then(async function (stream) {
-        recorder = RecordRTC(stream, {
-            type: 'gif',
-            frameRate: 1,
-            quality: 10,
-            width: 360,
-            hidden: 240,
-
-            onGifRecordingStarted: function () {
-                console.log('started')
-            },
-        });
-        recorder.startRecording();
-
-        recorder.camera = stream;
-
-        var btnGrabar = document.getElementById("btnCapturar");
-        var btnListo = document.getElementById("btnListo");
-
-        btnGrabar.style.display = "none";
-        btnListo.style.display = "block";
-
-    });
 
 
-}
+
 
 //Parar parar de grabar
 function stop() {
@@ -128,6 +135,9 @@ function stop() {
                 })
                 .catch(error => console.error('Error:', error))
         })
+
+        recorder.destroy();
+        recorder = null;
     })
 
     

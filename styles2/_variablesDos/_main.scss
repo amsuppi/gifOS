@@ -39,10 +39,14 @@ main{
 
            .btnComenzar{
                @extend %btnRosa;
+               width: 144px;
+                    height: 35px;
            }
            .btnCancelar{
                @extend %btnRosaClaro;
                margin-right: 5px;
+               width: 144px;
+                    height: 35px;
            }
        }
     }
@@ -87,22 +91,50 @@ main{
                 margin-bottom: 15px;
     
                 .btnCapturar{
-                    @extend %btnRosa;
+                    display: flex;
+
+                    img{
+                        @extend %btnRosa;
+                        padding: 5px 10px;
+
+                    }
+
+                    p{
+                        @extend %btnRosa;
+                        width: 120px;
+                        height: 25px;
+                        align-items: center;
+                    }
+                    
                 }
     
                 .bntListo{
                     display: none;
-                    @extend %btnCaptured;
+                    
+
+                    img{
+                        @extend %btnCaptured;
+                        padding: 5px 10px;
+                    }
+                    p{
+                        @extend %btnCaptured;
+                        width: 120px;
+                        height: 25px;
+                        align-items: center;
+                    }
                 }
     
                 .repetirCaptura{
                     display: none;
+                    margin-right: 5px;
                     @extend %btnRosaClaro;
                 }
     
                 .cancelar{
                     display: none;
                     @extend %btnRosaClaro;
+                    width: 144px;
+                    height: 35px;
                 }
                 .subirgif{
                     display: none;

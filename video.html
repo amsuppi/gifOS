@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles2/styles.css">
 
     <script type="text/javascript" src="js/video.js"></script>
@@ -78,9 +79,13 @@
 
 
                 <div class="botones">
-                    <button onclick="grabar();" class="btnCapturar" id="btnCapturar">
-                        <img src="assets/camera.svg" alt="">Capturar</button>
-                    <button onclick="stop();" class="bntListo" id="btnListo">Listo</button>
+                    <button class="btnCapturar" id="btnCapturar">
+                        <img src="assets/camera.svg" alt="">
+                        <p>Capturar</p></button>
+                    <button onclick="stop();" class="bntListo" id="btnListo">
+                        <img src="assets/recording.svg">
+                        <p>Listo</p>
+                        </button>
                     <button class="cancelar" id="cancelar">Cancelar</button>
                     <button class="repetirCaptura" id="repetirCaptura">Repetir Captura</button>
                     <button class="subirgif" id="subirGifo">Subir Guifo</button>
@@ -88,7 +93,7 @@
             </div>
         </div>
         <section class="seccionMisGifos">
-                <h2>Tendencias:</h2>
+                <h2>Mis guifos</h2>
                 <div class="mis-gifos" id="mis-gifos">
                 </div>
         </section>

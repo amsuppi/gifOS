@@ -39,10 +39,14 @@ main{
 
            .btnComenzar{
                @extend %btnFucsia;
+               width: 144px;
+                height: 35px;
            }
            .btnCancelar{
                @extend %secondaryButton;
                margin-right: 5px;
+               width: 144px;
+                height: 35px;
            }
        }
     }
@@ -88,25 +92,36 @@ main{
     
                 .btnCapturar{
                     @extend %btnFucsia;
+                    width: 144px;
+                    height: 35px;
                 }
     
                 .bntListo{
                     display: none;
                     @extend %btnListoDark;
+                    width: 144px;
+                    height: 35px;
                 }
     
                 .repetirCaptura{
                     display: none;
+                    margin-right: 5px;
                     @extend %secondaryButton;
+                    width: 144px;
+                    height: 35px;
                 }
     
                 .cancelar{
                     display: none;
                     @extend %secondaryButton;
+                    width: 144px;
+                    height: 35px;
                 }
                 .subirgif{
                     display: none;
                     @extend %btnFucsia;
+                    width: 144px;
+                    height: 35px;
                 }
             }
         }
