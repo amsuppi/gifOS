@@ -1,0 +1,19 @@
+
+@import '_variablesDos/_colors.scss';
+@import '_variablesDos/_barraTop.scss';
+@import '_variablesDos/_headerDark.scss';
+@import '_variablesDos/_mainDark.scss';
+@import '_variablesDos/_buttons.scss';
+@import '_variablesDos/_misGifOsDark.scss';
+
+*{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    }
+    body{
+        background-color: $color-borderButton;
+        .barra-top{
+            @extend %barraTopDark;
+        }
+    }

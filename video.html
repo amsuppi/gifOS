@@ -51,38 +51,49 @@
 
         </div>
 
-        <div class="contenedorVideo">
+        <div class="capturarVideo" id="capturarVideo">
+
             <div class="barra-top">
-                Vista previa
+                 <p>Vista previa</p>  
             </div>
 
-            <video src=""></video>
+            <video src="" id="video"></video>
+
+            <div id="pantallaProgress" class="pantallaProgress">
+
+                <div>
+                    <img src="assets/globe_img.png">
+                    <h4>Estamos subiendo tu guifo…</h4>
+                    <div id="barraCarga"></div>
+                    <p>Tiempo restante: 38 años algunos minutos</p>
+                </div>    
+
+            </div>
 
             <div class="contenedorButtons">
-                <div class="contador"></div>
+
+                <div class="contador">CONTADOR</div>
                 <button></button>
                 <div class="progress"></div>
 
 
                 <div class="botones">
-                    <button onclick="grabar();">
+                    <button onclick="grabar();" class="btnCapturar" id="btnCapturar">
                         <img src="assets/camera.svg" alt="">Capturar</button>
-                        <button onclick="stop();">Listo</button>
-                    <button>Repetir Captura</button>
+                    <button onclick="stop();" class="bntListo" id="btnListo">Listo</button>
+                    <button class="cancelar" id="cancelar">Cancelar</button>
+                    <button class="repetirCaptura" id="repetirCaptura">Repetir Captura</button>
                     <button class="subirgif" id="subirGifo">Subir Guifo</button>
                 </div>
             </div>
         </div>
-        <section>
-            <div class="mis-gifos">
-
-            </div>
+        <section class="seccionMisGifos">
+                <h2>Tendencias:</h2>
+                <div class="mis-gifos" id="mis-gifos">
+                </div>
         </section>
 
     </main>
-
-
-
 </body>
 
 </html>

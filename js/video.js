@@ -1,7 +1,3 @@
-var contenedoreGris = document.getElementById("contenedorGris");
-
-//---------------------------------------------------------------
-
 const url = "https://upload.giphy.com/v1/gifsapi_key=NXLRwlrJclD68iUt0t49LYzzurK0KJxq&tag=q&rating=G"
 
 
@@ -10,25 +6,38 @@ const url = "https://upload.giphy.com/v1/gifsapi_key=NXLRwlrJclD68iUt0t49LYzzurK
 function activarCamara() {
     navigator.mediaDevices.getUserMedia({
         audio: false,
-        video: {
-            width: {
-                max: 800
-            }
-        }
+        video: true
     }).then(function (stream) {
         var video = document.querySelector('video');
         video.srcObject = stream;
         video.onloadeddata = function (e) {
             video.play();
+
         }
+
+        var contenedorVideo = document.getElementById("capturarVideo");
+        var contenedorGris = document.getElementById("contenedorGris");
+
+        contenedorGris.style.display = "none";
+        contenedorVideo.style.display = "block";
     })
 }
+
+/*function cancelar(){
+    var btnCancelar = document.getElementById("cancelar");
+
+    btnCancelar.addEventListener("click", ()=>{
+
+        var contenedorGris = document.getElementById("contenedorGris");
+
+        contenedorGris.style.display = "none";
+    })
+}*/
 
 // Libreria RTC para grabar video
 function grabar() {
     navigator.mediaDevices.getUserMedia({
         video: true,
-        audio: true
     }).then(async function (stream) {
         recorder = RecordRTC(stream, {
             type: 'gif',
@@ -43,88 +52,112 @@ function grabar() {
         });
         recorder.startRecording();
 
+        recorder.camera = stream;
+
+        var btnGrabar = document.getElementById("btnCapturar");
+        var btnListo = document.getElementById("btnListo");
+
+        btnGrabar.style.display = "none";
+        btnListo.style.display = "block";
+
     });
 
-    document.getElementById("contenedorGris").remove();
+
 }
 
 //Parar parar de grabar
-function stop(blobURL) {
-    recorder.stopRecording(function () {
+function stop() {
 
-        /* apagar la camara*/ 
+    recorder.stopRecording(function () {
+        
+        recorder.camera.stop();
+        //apagar camara y que se repita el gif
+
+        /*var blob = recorder.getBlob();
+            video.src = URL.createObjectURL(blob);
+            video.play();*/
+
 
         let form = new FormData();
+
         form.append('file', recorder.getBlob(), "miGif.gif");
 
         console.log(form.get('file'))
 
-        var botonSubir =  document.getElementById("subirGifo");
+        var botonSubir = document.getElementById("subirGifo");
+        var btnListo = document.getElementById("btnListo");
+        var repetirCaptura = document.getElementById("repetirCaptura");
 
-        botonSubir.addEventListener("click", ()=>{
+        btnListo.style.display = "none";
+        repetirCaptura.style.display = "block";
+        botonSubir.style.display = "block";
+
+
+        botonSubir.addEventListener("click", () => {
+
+            var video = document.querySelector("video");
+            var progress = document.getElementById("pantallaProgress");
+
+
+            video.style.display = "none";
+            progress.style.display = "block";
 
             /*barra de carga*/
 
-                fetch("https://upload.giphy.com/v1/gifs?api_key=NXLRwlrJclD68iUt0t49LYzzurK0KJxq&tag=q&rating=G", {
+            fetch("https://upload.giphy.com/v1/gifs?api_key=NXLRwlrJclD68iUt0t49LYzzurK0KJxq&tag=q&rating=G", {
                     method: "POST",
-                    body : form
+                    body: form
                 }).then(response => {
                     return response.json();
 
-                }).then(json =>{
+                }).then(json => {
                     var gifId = json.data.id;
 
                     fetch('http://api.giphy.com/v1/gifs/' + gifId + '?api_key=NXLRwlrJclD68iUt0t49LYzzurK0KJxq&tag=q&rating=G')
-                    .then(response => {
-                        return response.json();
-                    }).then(
-                        json => {
-                            console.log ("Your gif" + gifId);
+                        .then(response => {
+                            return response.json();
+                        }).then(
+                            json => {
+                                console.log("Your gif" + gifId);
 
-                            localStorage.setItem('gif' + json.data.id, JSON.stringify(json));
+                                localStorage.setItem('gif' + json.data.id, JSON.stringify(json));
 
-                            var misGifs = localStorage.getItem('gif');
+                                
 
-                            for (let i = 0; i < misGifs.length; i++) {
-                                console.log(misGifs[i]);
-                                }
-                    })
+                            })
                 })
                 .catch(error => console.error('Error:', error))
-            })
+        })
+    })
 
-    });
+    
 
 }
 
-    /*fetch('http://api.giphy.com/v1/gifs/' + dataId + '?&api_key=' + 'znXEZG58twcEoPcbw5gG4a7F9I990uaL')
-    then(res => {
-      console.log(res.status)
-      if (res.status != 200) {
-        // Mostrar que hubo un error subiendo tu Guifo
-      }
-      return res.json();
-    })
-      .catch(error => {
-        // Mostrar que hubo un error subiendo tu Guifo
-        console.error('Error:', error)
-      })
-    console.log(form.get('file'))
-  })
-})
-}*/
-/*
 
- 
- var miObjeto = { 'marcado': 'html5', 'estilo': 'css3', 'comportamiento': 'js' };
+function misGifs() {
 
-// Guardo el objeto como un string
-localStorage.setItem('datos', JSON.stringify(miObjeto));
+    for (let i = 0; i < localStorage.length; i++) {
 
-// Obtengo el string previamente salvado y luego
-var guardado = localStorage.getItem('datos');
+        var div = document.getElementById("mis-gifos");
+        var x = document.createElement("img");
+        div.appendChild(x);
+        var item = localStorage.getItem(localStorage.key(i));
+        if(item.includes('data')){
+            var itemJson = JSON.parse(item);
 
-console.log('objetoObtenido: ', JSON.parse(guardado));*/
+            console.log(itemJson);
+
+            x.src = itemJson.data.images.original.url;
+        }
+        x.className = "mis-gifs";
+        x.id = "mis-gifs";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", misGifs);
+
+
 
 /*function stop(blobURL) { //no recibiría ningun parametro, no es necesario
 recorder.stopRecording(function () { //a la funcion callback la definiria aparte
@@ -165,4 +198,3 @@ for (let i = 0; i < misGifs.length; i++) {
 console.log(misGifs[i]);
 }
 });*/
-

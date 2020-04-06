@@ -5,8 +5,8 @@ main{
     .contenedorGris{
         display: block;
         width: 600px;
-        background: $color-gray;
-        box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
+        background: $color-lightgray;
+        box-shadow: inset -2px -2px 0 0 $color-borderDarkGray, inset 2px 2px 0 0 $color-white;
         margin: auto;
 
        .contTitulo{
@@ -38,10 +38,10 @@ main{
            padding: 10px;
 
            .btnComenzar{
-               @extend %btnRosa;
+               @extend %btnFucsia;
            }
            .btnCancelar{
-               @extend %btnRosaClaro;
+               @extend %secondaryButton;
                margin-right: 5px;
            }
        }
@@ -50,9 +50,9 @@ main{
     .capturarVideo{
         display: none;
         width: 700px;
-        box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
+        box-shadow: inset -2px -2px 0 0 $color-borderDarkGray, inset 2px 2px 0 0 $color-white;
         margin: auto;
-        background-color: $color-gray;
+        background-color: $color-lightgray;
         
 
         video{
@@ -87,26 +87,26 @@ main{
                 margin-bottom: 15px;
     
                 .btnCapturar{
-                    @extend %btnRosa;
+                    @extend %btnFucsia;
                 }
     
                 .bntListo{
                     display: none;
-                    @extend %btnCaptured;
+                    @extend %btnListoDark;
                 }
     
                 .repetirCaptura{
                     display: none;
-                    @extend %btnRosaClaro;
+                    @extend %secondaryButton;
                 }
     
                 .cancelar{
                     display: none;
-                    @extend %btnRosaClaro;
+                    @extend %secondaryButton;
                 }
                 .subirgif{
                     display: none;
-                    @extend %btnRosa;
+                    @extend %btnFucsia;
                 }
             }
         }

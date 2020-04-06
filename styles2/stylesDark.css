@@ -1,6 +1,6 @@
 body .barra-top {
-  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
-  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
   -webkit-box-shadow: 0 1px 0 0 #110038;
           box-shadow: 0 1px 0 0 #110038;
   padding: 5px;
@@ -16,8 +16,12 @@ header {
   margin: 30px;
 }
 
+header i {
+  color: #FFFFFF;
+}
+
 header img {
-  content: url("assets/gifOF_logo.png");
+  background-image: url("/assets/gifOF_logo.png");
   width: 200px;
 }
 
@@ -29,9 +33,9 @@ main {
 main .contenedorGris {
   display: block;
   width: 600px;
-  background: #E6E6E6;
-  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  background: #B4B4B4;
+  -webkit-box-shadow: inset -2px -2px 0 0 #808080, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #808080, inset 2px 2px 0 0 #FFFFFF;
   margin: auto;
 }
 
@@ -81,10 +85,10 @@ main .contenedorGris .botones .btnCancelar {
 main .capturarVideo {
   display: none;
   width: 700px;
-  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  -webkit-box-shadow: inset -2px -2px 0 0 #808080, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #808080, inset 2px 2px 0 0 #FFFFFF;
   margin: auto;
-  background-color: #E6E6E6;
+  background-color: #B4B4B4;
 }
 
 main .capturarVideo video {
@@ -152,14 +156,14 @@ main .capturarVideo .contenedorButtons .botones .subirgif {
 }
 
 main .contenedorGris .botones .btnComenzar, main .capturarVideo .contenedorButtons .botones .btnCapturar, main .capturarVideo .contenedorButtons .botones .subirgif {
-  background-color: #F7C9F3;
+  background-color: #EE3EFE;
   border: solid 1px #110038;
-  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
   padding: 5px;
   font-family: ChakraPetch-Regular;
   font-size: 16px;
-  color: #110038;
+  color: #FFFFFF;
   letter-spacing: 0;
   text-align: center;
   line-height: 18px;
@@ -167,18 +171,16 @@ main .contenedorGris .botones .btnComenzar, main .capturarVideo .contenedorButto
 }
 
 main .contenedorGris .botones .btnCancelar, main .capturarVideo .contenedorButtons .botones .repetirCaptura, main .capturarVideo .contenedorButtons .botones .cancelar {
-  background: #FFF4FD;
-  border: 1px solid #110038;
-  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-  padding: 5px;
+  background: #110038;
+  border: 1px solid #B4B4B4;
+  -webkit-box-shadow: inset -1px -1px 0 0 #808080, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #808080, inset 1px 1px 0 0 #FFFFFF;
+  color: #FFFFFF;
   font-family: ChakraPetch-Regular;
   font-size: 16px;
-  color: #110038;
   letter-spacing: 0;
   text-align: center;
   line-height: 18px;
-  text-decoration: none;
 }
 
 main .capturarVideo .contenedorButtons .botones .bntListo {
@@ -186,14 +188,12 @@ main .capturarVideo .contenedorButtons .botones .bntListo {
   border: 1px solid #110038;
   -webkit-box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
-  padding: 5px;
   font-family: ChakraPetch-Regular;
   font-size: 16px;
-  color: #110038;
+  color: #FFFFFF;
   letter-spacing: 0;
   text-align: center;
   line-height: 18px;
-  text-decoration: none;
 }
 
 .seccionMisGifos {
@@ -202,9 +202,9 @@ main .capturarVideo .contenedorButtons .botones .bntListo {
 
 .seccionMisGifos h2 {
   background: #FFFAFE;
-  border: 1px solid #E6BBE2;
-  -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #E6BBE2;
-          box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #E6BBE2;
+  border: 1px solid #2E32FB;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #110038;
+          box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #110038;
   font-family: ChakraPetch-Regular;
   font-size: 14px;
   font-weight: normal;
@@ -221,6 +221,6 @@ main .capturarVideo .contenedorButtons .botones .bntListo {
 }
 
 body {
-  background-color: #FFF4FD;
+  background-color: #110038;
 }
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=stylesDark.css.map */
