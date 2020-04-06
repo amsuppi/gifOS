@@ -39,14 +39,14 @@ main{
 
            .btnComenzar{
                @extend %btnRosa;
-               width: 144px;
-                    height: 35px;
+               width: 120px;
+              
            }
            .btnCancelar{
                @extend %btnRosaClaro;
                margin-right: 5px;
-               width: 144px;
-                    height: 35px;
+               width: 120px;
+              
            }
        }
     }
@@ -95,15 +95,14 @@ main{
 
                     img{
                         @extend %btnRosa;
-                        padding: 5px 10px;
+                        
 
                     }
 
                     p{
                         @extend %btnRosa;
-                        width: 120px;
-                        height: 25px;
                         align-items: center;
+                        width: 120px;
                     }
                     
                 }
@@ -118,9 +117,8 @@ main{
                     }
                     p{
                         @extend %btnCaptured;
-                        width: 120px;
-                        height: 25px;
                         align-items: center;
+                        width: 120px;
                     }
                 }
     
@@ -128,17 +126,19 @@ main{
                     display: none;
                     margin-right: 5px;
                     @extend %btnRosaClaro;
+                    width: 120px;
                 }
     
                 .cancelar{
                     display: none;
                     @extend %btnRosaClaro;
-                    width: 144px;
-                    height: 35px;
+                    width: 120px;
+                    
                 }
                 .subirgif{
                     display: none;
                     @extend %btnRosa;
+                    width: 120px;
                 }
             }
         }

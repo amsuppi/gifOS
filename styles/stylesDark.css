@@ -1,5 +1,5 @@
 @charset "UTF-8";
-body h4, body .sugerencias .gif-sugerencias .barratop-sugerencias, .tendencias .contenedor-gif .barra-bottom, body .barra-top {
+body h4, body .sugerencias .gif-sugerencias .barratop-sugerencias, body .barra-top {
   background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
   background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
   -webkit-box-shadow: 0 1px 0 0 #110038;
@@ -29,34 +29,63 @@ header .contenedor-buttons {
   display: flex;
 }
 
+header .contenedor-buttons .crear-gifOS {
+  margin-right: 5px;
+}
+
+header .contenedor-buttons .theme {
+  margin-right: 5px;
+}
+
 header .contenedor-buttons .theme .botonDrop {
-  background: none;
+  margin-top: 7px;
+}
+
+header .contenedor-buttons .theme .botonDrop .button-dropdown {
+  width: 120px;
 }
 
 header .contenedor-buttons .theme #drop1 {
   display: none;
   position: absolute;
+  background-color: #E6E6E6;
+  width: 100%;
 }
 
 header .contenedor-buttons .theme #drop1 li {
   list-style-type: none;
 }
 
-header .contenedor-buttons .theme .lnk-gifOS {
+header .contenedor-buttons .lnk-gifOS {
   font-size: 16px;
   color: #FFFFFF;
   letter-spacing: 0;
   line-height: 18px;
+  padding: 5px;
   text-decoration: none;
 }
 
+header .contenedor-buttons .lnk-gifOS::first-letter {
+  -webkit-text-decoration: underline 1px #FFFFFF;
+          text-decoration: underline 1px #FFFFFF;
+}
+
+header .contenedor-buttons .lnk-gifOS:hover {
+  border: 1px dotted #FFFFFF;
+}
+
+header .contenedor-buttons .lnk-gifOS:hover:active {
+  color: #FFFFFF;
+  border: none;
+}
+
 /*DARK PARTÇ*/
-header .contenedor-buttons .crear-gifOS, header .contenedor-buttons .theme .botonDrop .button-dropdown, header .contenedor-buttons .theme .botonDrop i {
+header .contenedor-buttons .crear-gifOS, header .contenedor-buttons .theme .botonDrop .button-dropdown, header .contenedor-buttons .theme .botonDrop span {
   background-color: #EE3EFE;
   border: solid 1px #110038;
   -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
-  padding: 5px;
+  padding: 7px;
   font-family: ChakraPetch-Regular;
   font-size: 16px;
   color: #FFFFFF;
@@ -102,6 +131,14 @@ body .sugerencias .gif-sugerencias .vermas-sugerencias {
   -webkit-box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
   color: #FFFFFF;
+}
+
+header .contenedor-buttons .crear-gifOS:hover, header .contenedor-buttons .crear-gifOS:active, header .contenedor-buttons .theme .botonDrop .button-dropdown:hover, header .contenedor-buttons .theme .botonDrop .button-dropdown:active, header .contenedor-buttons .theme .botonDrop span:hover, header .contenedor-buttons .theme .botonDrop span:active {
+  border: 1px solid #110038;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+  background-color: #CE36DB;
+  cursor: pointer;
 }
 
 .section-buscar {
@@ -190,19 +227,32 @@ body .sugerencias .gif-sugerencias .vermas-sugerencias {
 }
 
 .tendencias .contenedor-gif {
-  background-color: red;
-  width: 25%;
-  height: 256px;
-  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /*.barra-bottom {
+            @extend %barraTop;
+            align-self: flex-end;
+            align-items: flex-end;
+            -ms-flex-align: end;
+        }*/
 }
 
-.tendencias .contenedor-gif .barra-bottom {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  -webkit-box-align: end;
-          align-items: flex-end;
-  -ms-flex-align: end;
+.tendencias .contenedor-gif .img-gif {
+  width: 280px;
+  height: 280px;
+  margin-bottom: 20px;
+}
+
+.tendencias .contenedor-gif .img-gif:hover {
+  outline: 2px dotted #110038;
+  outline-offset: -5px;
 }
 
 * {

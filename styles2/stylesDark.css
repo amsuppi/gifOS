@@ -81,14 +81,12 @@ main .contenedorGris .botones {
 }
 
 main .contenedorGris .botones .btnComenzar {
-  width: 144px;
-  height: 35px;
+  width: 120px;
 }
 
 main .contenedorGris .botones .btnCancelar {
   margin-right: 5px;
-  width: 144px;
-  height: 35px;
+  width: 120px;
 }
 
 main .capturarVideo {
@@ -149,42 +147,56 @@ main .capturarVideo .contenedorButtons .botones {
 }
 
 main .capturarVideo .contenedorButtons .botones .btnCapturar {
-  width: 144px;
-  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .capturarVideo .contenedorButtons .botones .btnCapturar p {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 120px;
 }
 
 main .capturarVideo .contenedorButtons .botones .bntListo {
   display: none;
-  width: 144px;
-  height: 35px;
+}
+
+main .capturarVideo .contenedorButtons .botones .bntListo img {
+  padding: 5px 10px;
+}
+
+main .capturarVideo .contenedorButtons .botones .bntListo p {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 120px;
 }
 
 main .capturarVideo .contenedorButtons .botones .repetirCaptura {
   display: none;
   margin-right: 5px;
-  width: 144px;
-  height: 35px;
+  width: 160px;
 }
 
 main .capturarVideo .contenedorButtons .botones .cancelar {
   display: none;
-  width: 144px;
-  height: 35px;
+  width: 120px;
 }
 
 main .capturarVideo .contenedorButtons .botones .subirgif {
   display: none;
-  width: 144px;
-  height: 35px;
+  width: 120px;
 }
 
-main .contenedorGris .botones .btnComenzar, main .capturarVideo .contenedorButtons .botones .btnCapturar, main .capturarVideo .contenedorButtons .botones .subirgif {
+main .contenedorGris .botones .btnComenzar, main .capturarVideo .contenedorButtons .botones .btnCapturar img, main .capturarVideo .contenedorButtons .botones .btnCapturar p, main .capturarVideo .contenedorButtons .botones .subirgif {
   background-color: #EE3EFE;
   border: solid 1px #110038;
   -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
-  padding: 5px;
-  font-size: 16px;
+  padding: 7px;
+  font-size: 14px;
   color: #FFFFFF;
   letter-spacing: 0;
   text-align: center;
@@ -198,18 +210,20 @@ main .contenedorGris .botones .btnCancelar, main .capturarVideo .contenedorButto
   -webkit-box-shadow: inset -1px -1px 0 0 #808080, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #808080, inset 1px 1px 0 0 #FFFFFF;
   color: #FFFFFF;
-  font-size: 16px;
+  font-size: 14px;
+  padding: 7px 25px;
   letter-spacing: 0;
   text-align: center;
   line-height: 18px;
 }
 
-main .capturarVideo .contenedorButtons .botones .bntListo {
+main .capturarVideo .contenedorButtons .botones .bntListo img, main .capturarVideo .contenedorButtons .botones .bntListo p {
   background: #FF6161;
   border: 1px solid #110038;
   -webkit-box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
-  font-size: 16px;
+  font-size: 14px;
+  padding: 7px;
   color: #FFFFFF;
   letter-spacing: 0;
   text-align: center;
@@ -231,6 +245,21 @@ main .capturarVideo .contenedorButtons .botones .bntListo {
   padding: 5px;
   margin-bottom: 10px;
   letter-spacing: 0;
+}
+
+.seccionMisGifos .mis-gifos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.seccionMisGifos .mis-gifos .img-gifs {
+  width: 280px;
+  height: 280px;
+  margin-bottom: 20px;
 }
 
 * {

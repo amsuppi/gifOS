@@ -160,8 +160,8 @@ function misGifs() {
 
             x.src = itemJson.data.images.original.url;
         }
-        x.className = "mis-gifs";
-        x.id = "mis-gifs";
+        x.className = "img-gifs";
+        x.id = "img-gifs";
     }
 }
 

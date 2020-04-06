@@ -1,18 +1,30 @@
-.tendencias{
+.tendencias {
     margin: 20px 50px 30px 50px;
 
-    .contenedor-gif{
-        background-color: red;
-        width: 25%;
-        height: 256px;
-        box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
+    .contenedor-gif {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
-        .barra-bottom{
-            @extend %barraTopDark;
+
+        /*.barra-bottom {
+            @extend %barraTop;
             align-self: flex-end;
             align-items: flex-end;
             -ms-flex-align: end;
+        }*/
+
+        .img-gif{
+            width: 280px;
+            height: 280px;
+            margin-bottom: 20px;
+        &:hover {
+            outline: 2px dotted $color-borderButton;
+            outline-offset: -5px;
         }
+        }
+        
     }
-   
+
 }

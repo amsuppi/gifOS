@@ -18,8 +18,10 @@ header {
         .theme{
             margin-right: 5px;
         .botonDrop{
-            @extend %btnRosa;
+            margin-top: 7px;
             .button-dropdown {
+                @extend %btnRosa;
+                width: 120px;
                 
                 &:hover{
                     @extend %hoverRosa;
@@ -29,7 +31,8 @@ header {
                 }
             }
             span{
-                width: 15px;
+                @extend %btnRosa;
+                
                 img{
                     margin: auto;
                 }
@@ -38,7 +41,6 @@ header {
                 }
                 &:active{
                     @extend %hoverRosa;
-        
                 }
             }
         }

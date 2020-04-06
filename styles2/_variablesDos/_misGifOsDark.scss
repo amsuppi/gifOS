@@ -11,4 +11,17 @@
         margin-bottom: 10px;
         letter-spacing: 0;
     }
+
+    .mis-gifos{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        
+
+        .img-gifs{
+            width: 280px;
+            height: 280px;
+            margin-bottom: 20px;
+        }
+    }
 }

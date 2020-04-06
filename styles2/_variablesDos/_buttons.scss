@@ -2,8 +2,8 @@
     background-color: $color-button;
     border: solid 1px $color-borderButton;
     box-shadow: inset -1px -1px 0 0 $color-shadow, inset 1px 1px 0 0 $color-white;
-    padding: 5px;
-    font-size: 16px;
+    padding: 7px;
+    font-size: 14px;
     color: $color-borderButton;
     letter-spacing: 0;
     text-align: center;
@@ -15,8 +15,8 @@
     background: $color-backgrund;
     border: 1px solid $color-borderButton;
     box-shadow: inset -1px -1px 0 0 $color-shadow, inset 1px 1px 0 0 $color-white;
-    padding: 5px;
-    font-size: 16px;
+    padding: 7px;
+    font-size: 14px;
     color: $color-borderButton;
     letter-spacing: 0;
     text-align: center;
@@ -28,8 +28,8 @@
     background: $color-captured;
     border: 1px solid $color-dark;
     box-shadow: inset -1px -1px 0 0 $color-rosa-rojizo, inset 1px 1px 0 0 $color-white;
-    padding: 5px;
-    font-size: 16px;
+    padding: 7px;
+    font-size: 14px;
     color: $color-borderButton;
     letter-spacing: 0;
     text-align: center;
@@ -43,8 +43,8 @@
     background-color: $color-darkButton;
     border: solid 1px $color-borderButton;
     box-shadow: inset -1px -1px 0 0 $color-sadow-dark, inset 1px 1px 0 0 $color-white;
-    padding: 5px;
-    font-size: 16px;
+    padding: 7px;
+    font-size: 14px;
     color: $color-white;
     letter-spacing: 0;
     text-align: center;
@@ -56,8 +56,8 @@
     background: $color-lightgray;
     border: 1px solid $color-borderDarkGray;
     box-shadow: inset -1px -1px 0 0 $color-borderDarkGray, inset 1px 1px 0 0 $color-white;
-    height: 30px;
-    padding: 5px;
+    height: 7px;
+    padding: 10px;
     vertical-align: middle;
     align-items: center;
     color: $color-borderDarkGray;
@@ -67,7 +67,7 @@
     background-color: $color-lightgray;
     box-shadow: inset -2px -2px 0 0 $color-borderDarkGray, inset 2px 2px 0 0 $color-white;
     align-content: center;
-    padding: 5px;
+    padding: 7px;
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -85,7 +85,8 @@
     border: 1px solid $color-lightgray;
     box-shadow: inset -1px -1px 0 0 $color-borderDarkGray, inset 1px 1px 0 0 $color-white;
     color: $color-white;
-    font-size: 16px;
+    font-size: 14px;
+    padding: 7px 25px;
     letter-spacing: 0;
     text-align: center;
     line-height: 18px;
@@ -95,7 +96,8 @@
     background: $color-captured;
 border: 1px solid $color-borderButton;
 box-shadow: inset -1px -1px 0 0 $color-rosa-rojizo, inset 1px 1px 0 0 $color-white;
-font-size: 16px;
+font-size: 14px;
+padding: 7px;
 color: $color-white;
 letter-spacing: 0;
 text-align: center;

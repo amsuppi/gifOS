@@ -3,46 +3,85 @@ header {
     justify-content: space-between;
     padding: 20px 50px 0px 50px;
     align-items: center;
-
-    .contenedor-buttons {
+    .contenedor-buttons{
         display: flex;
-
         .crear-gifOS {
+            margin-right: 5px;
             @extend %btnFucsia;
+            &:hover{
+                @extend %hoverFucsia;
+            }
+            &:active{
+                @extend %hoverFucsia;
+            }
+        }
+        .theme{
+            margin-right: 5px;
+        .botonDrop{
+            margin-top: 7px;
+            .button-dropdown {
+                @extend %btnFucsia;
+                width: 120px;
+                
+                &:hover{
+                    @extend %hoverFucsia;
+                }
+                &:active{
+                    @extend %hoverFucsia;
+                }
+            }
+            span{
+                @extend %btnFucsia;
+                
+                img{
+                    
+                }
+                &:hover{
+                    @extend %hoverFucsia;
+                }
+                &:active{
+                    @extend %hoverFucsia;
+                }
+            }
         }
 
-        .theme {
-            .botonDrop {
-                background: none;
-
-                .button-dropdown {
-                    @extend %btnFucsia;
-
-                }
-
-                i {
-                    @extend %btnFucsia;
-
-                }
+        #drop1 {
+            display: none;
+            position: absolute;
+            background-color: $color-gray;
+            width: 100%;
+            li{
+                list-style-type: none;
             }
-
-            #drop1 {
-                display: none;
-                position: absolute;
-
-                li {
-                    list-style-type: none;
-                }
-            }
-
-            .lnk-gifOS {
-                font-size: 16px;
-                color: $color-white;
-                letter-spacing: 0;
-                line-height: 18px;
-                text-decoration: none;
-            }
-
         }
     }
+       
+        .lnk-gifOS {
+            font-size: 16px;
+            color: $color-white;
+            letter-spacing: 0;
+            line-height: 18px;
+            padding: 5px;
+            text-decoration: none;
+
+            &::first-letter{
+                text-decoration: underline 1px $color-white;
+            }
+    
+            &:hover{
+                border: 1px dotted $color-white;
+    
+            &:active{
+                color: $color-white;
+                border: none;
+            }
+    
+            
+            }
+        }
+    
+        
+    }
+
+    
 }

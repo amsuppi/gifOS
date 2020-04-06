@@ -37,8 +37,12 @@ header .contenedor-buttons .theme {
   margin-right: 5px;
 }
 
-header .contenedor-buttons .theme .botonDrop span {
-  width: 15px;
+header .contenedor-buttons .theme .botonDrop {
+  margin-top: 7px;
+}
+
+header .contenedor-buttons .theme .botonDrop .button-dropdown {
+  width: 120px;
 }
 
 header .contenedor-buttons .theme .botonDrop span img {
@@ -79,12 +83,12 @@ header .contenedor-buttons .lnk-gifOS:hover:active {
   border: none;
 }
 
-header .contenedor-buttons .crear-gifOS, header .contenedor-buttons .theme .botonDrop {
+header .contenedor-buttons .crear-gifOS, header .contenedor-buttons .theme .botonDrop .button-dropdown, header .contenedor-buttons .theme .botonDrop span {
   background-color: #F7C9F3;
   border: solid 1px #110038;
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-  padding: 5px;
+  padding: 7px;
   font-size: 16px;
   color: #110038;
   letter-spacing: 0;

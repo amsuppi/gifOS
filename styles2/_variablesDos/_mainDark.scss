@@ -39,14 +39,12 @@ main{
 
            .btnComenzar{
                @extend %btnFucsia;
-               width: 144px;
-                height: 35px;
+               width: 120px;
            }
            .btnCancelar{
                @extend %secondaryButton;
                margin-right: 5px;
-               width: 144px;
-                height: 35px;
+               width: 120px;
            }
        }
     }
@@ -91,37 +89,52 @@ main{
                 margin-bottom: 15px;
     
                 .btnCapturar{
-                    @extend %btnFucsia;
-                    width: 144px;
-                    height: 35px;
+                    display: flex;
+
+                    img{
+                        @extend %btnFucsia;
+                        
+
+                    }
+
+                    p{
+                        @extend %btnFucsia;
+                        align-items: center;
+                        width: 120px;
+                    }
+                    
                 }
     
                 .bntListo{
                     display: none;
-                    @extend %btnListoDark;
-                    width: 144px;
-                    height: 35px;
+                    
+
+                    img{
+                        @extend %btnListoDark;
+                        padding: 5px 10px;
+                    }
+                    p{
+                        @extend %btnListoDark;
+                        align-items: center;
+                        width: 120px;
+                    }
                 }
-    
                 .repetirCaptura{
                     display: none;
                     margin-right: 5px;
                     @extend %secondaryButton;
-                    width: 144px;
-                    height: 35px;
+                    width: 160px;
                 }
     
                 .cancelar{
                     display: none;
                     @extend %secondaryButton;
-                    width: 144px;
-                    height: 35px;
+                    width: 120px;
                 }
                 .subirgif{
                     display: none;
                     @extend %btnFucsia;
-                    width: 144px;
-                    height: 35px;
+                    width: 120px;
                 }
             }
         }
