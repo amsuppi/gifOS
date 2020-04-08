@@ -18,11 +18,39 @@ function dropFunction(){
 function cambiarEstilos(id){
     if (id == "opcionRosa"){
         document.getElementById("archivoCss").href = common;
+        document.getElementById("logo").src = url(".../assets/");
     } else{
         document.getElementById("archivoCss").href = black;
+        document.getElementById("logo-dark").style.display = "none";
     }
 
 }
+
+
+
+
+//Seccion Buscar
+
+function dropBuscar(){
+    var input = document.getElementById("n2");
+
+    input.addEventListener("dragenter", ()=>{
+
+        var contenido = document.getElementById("drop2");
+
+        console.log("toma algo");
+
+        if (contenido.style.display == "none") {
+            contenido.style.display = "block";
+        } else {
+            contenido.style.display = "none";
+        } 
+
+    })
+
+
+   
+ }
 
 
 

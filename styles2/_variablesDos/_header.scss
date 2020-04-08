@@ -1,8 +1,20 @@
 header{
     display: flex;
+    justify-content: space-around;
     margin: 30px;
-    img{
-        content: url('assets/gifOF_logo.png');
-        width: 200px;
+
+    .volver-atras{
+        i{
+            
+        }
+        img{
+            content: url('assets/gifOF_logo.png');
+            width: 200px;
+        }
     }
+
+    .elegir-tema{
+
+    }
+    
 }

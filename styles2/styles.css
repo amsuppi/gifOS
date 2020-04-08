@@ -15,10 +15,12 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 30px;
 }
 
-header img {
+header .volver-atras img {
   content: url("assets/gifOF_logo.png");
   width: 200px;
 }

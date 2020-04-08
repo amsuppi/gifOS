@@ -15,16 +15,22 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 30px;
 }
 
-header i {
+header .volver-atras i {
   color: #FFFFFF;
 }
 
-header img {
-  background-image: url("/assets/gifOF_logo.png");
-  width: 200px;
+header .volver-atras .icono {
+  content: url("assets/gifOF_logo.png");
+}
+
+header .elegir-tema .btn-tema a {
+  width: 120px;
 }
 
 main {
@@ -190,7 +196,7 @@ main .capturarVideo .contenedorButtons .botones .subirgif {
   width: 120px;
 }
 
-main .contenedorGris .botones .btnComenzar, main .capturarVideo .contenedorButtons .botones .btnCapturar img, main .capturarVideo .contenedorButtons .botones .btnCapturar p, main .capturarVideo .contenedorButtons .botones .subirgif {
+header .elegir-tema .btn-tema a, header .elegir-tema .btn-tema span, main .contenedorGris .botones .btnComenzar, main .capturarVideo .contenedorButtons .botones .btnCapturar img, main .capturarVideo .contenedorButtons .botones .btnCapturar p, main .capturarVideo .contenedorButtons .botones .subirgif {
   background-color: #EE3EFE;
   border: solid 1px #110038;
   -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;

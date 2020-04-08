@@ -49,9 +49,28 @@ header {
             display: none;
             position: absolute;
             background-color: $color-gray;
-            width: 100%;
-            li{
+            margin-top: 7px;
+            width: 127px;
+            background: $color-gray;
+            box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
+
+            li {
                 list-style-type: none;
+                text-decoration: none;
+                background: $color-backgrund;
+                border: 1px solid $color-rosa-claro;
+                box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 $color-white;
+                font-size: 16px;
+                color: $color-borderButton;
+                letter-spacing: 0;
+                line-height: 22px;
+                padding: 5px;
+                margin: 5px;
+
+                &:visited{
+                    color: $color-borderButton;
+                    text-decoration: none;
+                }
             }
         }
     }

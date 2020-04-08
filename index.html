@@ -19,7 +19,8 @@
     </div>
 
     <header>
-        <img class="logo" src="assets/gifOF_logo.png" alt="logo">
+        <img class="logo" id="logo" src="assets/gifOF_logo.png" alt="logo">
+        <img class="logo" id="logo-dark" src="assets/gifOF_logo_dark.png" alt="logo">
 
         <div class="contenedor-buttons">
             <button class="crear-gifOS">
@@ -43,6 +44,12 @@
         <section class="section-buscar">
             <h4>Buscar</h4>
             <input type="text" id="n2" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" />
+            <ul id="drop2">
+                <li id="opcionUno"><a>Cat</a></li>
+                <li id="opcionDos"><a>Dog</a></li>
+                <li id="opcionTres"><a>Glitter</a></li>
+            </ul>
+
             <button id="search" onclick="llamar()"> <img src="assets/lupa.svg" >Buscar</button>
         </section>
 

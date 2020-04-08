@@ -53,11 +53,31 @@ header .contenedor-buttons .theme #drop1 {
   display: none;
   position: absolute;
   background-color: #E6E6E6;
-  width: 100%;
+  margin-top: 7px;
+  width: 127px;
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
 
 header .contenedor-buttons .theme #drop1 li {
   list-style-type: none;
+  text-decoration: none;
+  background: #FFF4FD;
+  border: 1px solid #CCA6C9;
+  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 22px;
+  padding: 5px;
+  margin: 5px;
+}
+
+header .contenedor-buttons .theme #drop1 li:visited {
+  color: #110038;
+  text-decoration: none;
 }
 
 header .contenedor-buttons .lnk-gifOS {
@@ -158,10 +178,37 @@ body .sugerencias .gif-sugerencias .vermas-sugerencias:hover {
   border: 1px solid #808080;
   -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #110038;
           box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #110038;
-  margin: 20px 0px 20px 10px;
+  margin: 20px 0px 0px 10px;
   height: 38px;
   padding-left: 10px;
   width: 90%;
+}
+
+.section-buscar #drop2 {
+  display: none;
+  position: absolute;
+  background-color: #E6E6E6;
+  width: 84%;
+  z-index: 1;
+  margin-left: 10px;
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.section-buscar #drop2 li {
+  list-style-type: none;
+  text-decoration: none;
+  background: #FFF4FD;
+  border: 1px solid #CCA6C9;
+  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 22px;
+  padding: 5px;
+  margin: 5px;
 }
 
 .section-buscar button {
@@ -180,7 +227,6 @@ body h2 {
   border: 1px solid #E6BBE2;
   -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #E6BBE2;
           box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #E6BBE2;
-  font-family: ChakraPetch-Regular;
   font-size: 14px;
   font-weight: normal;
   color: #110038;
@@ -273,6 +319,7 @@ body .sugerencias .gif-sugerencias .gif-sugerencias {
 }
 
 body {
+  font-family: 'Chakra Petch', sans-serif;
   background-color: #FFF4FD;
 }
 /*# sourceMappingURL=styles.css.map */

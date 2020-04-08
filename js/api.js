@@ -33,10 +33,6 @@ fetch(trending)
         var elemento3 = document.getElementById("title4");
         var text = document.createTextNode(json.data[23].title);
         elemento3.appendChild(text);
-
-        
-        
-        
         
     })
     .catch(error => {

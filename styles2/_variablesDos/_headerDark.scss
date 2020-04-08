@@ -1,12 +1,61 @@
 header{
     display: flex;
+    justify-content: space-between;
+    align-content: center;
     margin: 30px;
 
-    i{
-        color: $color-white;
+    .volver-atras{
+        i{
+            color: $color-white;
+        }
+        .icono{
+            content: url('assets/gifOF_logo.png');
+        }
     }
-    img{
-        background-image: url('/assets/gifOF_logo.png');
-        width: 200px;
+
+    .elegir-tema{
+        .btn-tema{
+            a{
+                @extend %btnFucsia;
+                width: 100px;
+
+            }
+            span{
+                @extend %btnFucsia;
+            }
+
+        }
+        #drop2{
+           /* display: none;*/
+            position: absolute;
+            background-color: $color-gray;
+            margin-top: 7px;
+            width: 127px;
+            background: $color-gray;
+            box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
+
+            li {
+                list-style-type: none;
+                text-decoration: none;
+                background: $color-backgrund;
+                border: 1px solid $color-rosa-claro;
+                box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 $color-white;
+                font-size: 16px;
+                color: $color-borderButton;
+                letter-spacing: 0;
+                line-height: 22px;
+                padding: 5px;
+                margin: 5px;
+
+                &:visited{
+                    color: $color-borderButton;
+                    text-decoration: none;
+                }
+            }
+        }
+
+
+
     }
+    
 }

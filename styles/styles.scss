@@ -9,12 +9,14 @@
 @import '_variables/_secciontendencias.scss';
 
 *{
+
     border: 0px;
     margin: 0px;
     padding: 0px;
     }
 
 body{
+    font-family: 'Chakra Petch', sans-serif;
     background-color: $color-backgrund;
     .barra-top{
         @extend %barraTop;
