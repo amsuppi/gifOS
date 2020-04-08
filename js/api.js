@@ -66,6 +66,28 @@ fetch(trending)
 
 //----------------------------------------------
 
+function buscarTend(){
+    var lista = document.getElementById("drop2");
+
+        if (lista.style.display == "none") {
+            lista.style.display = "block";
+        } else {
+            lista.style.display = "none";
+        } 
+
+}
+
+function buscarOpciones(id){
+
+        console.log (id.textContent);
+
+        
+
+}
+   
+
+
+
 //search
 
 function llamar(){

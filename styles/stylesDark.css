@@ -39,6 +39,7 @@ header .contenedor-buttons .theme {
 
 header .contenedor-buttons .theme .botonDrop {
   margin-top: 7px;
+  background-color: transparent;
 }
 
 header .contenedor-buttons .theme .botonDrop .button-dropdown {
@@ -50,7 +51,7 @@ header .contenedor-buttons .theme #drop1 {
   position: absolute;
   background-color: #E6E6E6;
   margin-top: 7px;
-  width: 127px;
+  width: 117px;
   background: #E6E6E6;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
@@ -129,22 +130,6 @@ header .contenedor-buttons .crear-gifOS, header .contenedor-buttons .theme .boto
   color: #808080;
 }
 
-body .sugerencias .gif-sugerencias .close {
-  background-color: #B4B4B4;
-  -webkit-box-shadow: inset -2px -2px 0 0 #808080, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #808080, inset 2px 2px 0 0 #FFFFFF;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  padding: 5px;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 body .sugerencias .gif-sugerencias .vermas-sugerencias {
   background: #2E32FB;
   border: 1px solid #4C2F99;
@@ -182,6 +167,39 @@ header .contenedor-buttons .crear-gifOS:hover, header .contenedor-buttons .crear
 
 .section-buscar button {
   display: inline;
+}
+
+.section-buscar #drop2 {
+  display: none;
+  position: absolute;
+  background-color: #E6E6E6;
+  width: 84%;
+  z-index: 1;
+  margin-left: 10px;
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.section-buscar #drop2 li {
+  list-style-type: none;
+  text-decoration: none;
+  background: #FFF4FD;
+  border: 1px solid #CCA6C9;
+  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 22px;
+  padding: 5px;
+  margin: 5px;
+}
+
+body h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 5px;
 }
 
 body h2 {
@@ -228,17 +246,18 @@ body .sugerencias .gif-sugerencias .barratop-sugerencias {
   padding-right: 5px;
 }
 
-body .sugerencias .gif-sugerencias img {
-  width: 280px;
-  height: 245px;
-  overflow: hidden;
-}
-
 body .sugerencias .gif-sugerencias .vermas-sugerencias {
   padding: 5px;
   margin: 10px;
-  float: bottom;
   position: absolute;
+  margin-top: 220px;
+}
+
+body .sugerencias .gif-sugerencias .gif-sugerencias {
+  width: 280px;
+  height: 260px;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
 
 .tendencias {

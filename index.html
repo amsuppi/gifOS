@@ -19,8 +19,7 @@
     </div>
 
     <header>
-        <img class="logo" id="logo" src="assets/gifOF_logo.png" alt="logo">
-        <img class="logo" id="logo-dark" src="assets/gifOF_logo_dark.png" alt="logo">
+        <img class="logo" id="iconoLogo" src="assets/logoceleste.png">
 
         <div class="contenedor-buttons">
             <button class="crear-gifOS">
@@ -32,8 +31,8 @@
                     <span><img src="assets/dropdown.svg"></span>
                 </button>
                 <ul id="drop1">
-                    <li id="opcionRosa" onclick="cambiarEstilos(this.id)"><a href="#">Sailor Day</a></li>
-                    <li id="opcionAzul" onclick="cambiarEstilos(this.id)"><a href="#">Sailor Night</a></li>
+                    <li id="opcionRosa" onclick="cambiarEstilos(this.id)">Sailor Day</li>
+                    <li id="opcionAzul" onclick="cambiarEstilos(this.id)">Sailor Night</li>
                 </ul>
             </div>
             <a class="lnk-gifOS" href="video.html">Mis Guifos</a>
@@ -43,11 +42,11 @@
     <main>
         <section class="section-buscar">
             <h4>Buscar</h4>
-            <input type="text" id="n2" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" />
+            <input type="text" onclick="buscarTend()" id="n2" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" />
             <ul id="drop2">
-                <li id="opcionUno"><a>Cat</a></li>
-                <li id="opcionDos"><a>Dog</a></li>
-                <li id="opcionTres"><a>Glitter</a></li>
+                <li id="opcionUno" onclick="buscarOpciones(this.id)">Cat</li>
+                <li id="opcionDos" onclick="buscarOpciones(this.id)">Dog</li>
+                <li id="opcionTres" onclick="buscarOpciones(this.id)">Glitter</li>
             </ul>
 
             <button id="search" onclick="llamar()"> <img src="assets/lupa.svg" >Buscar</button>
@@ -61,7 +60,7 @@
             <div class="contenedor-gif" >
                 <div class="barratop-sugerencias">
                     <h3 id="title1">#</h3>
-                    <a href="#" class="close">X</a>
+                    <a href="#" class="close"><img src="assets/close.svg"></a>
                 </div>
                 <button class="vermas-sugerencias">Ver Más...</button>
                 <img class="gif-sugerencias" id="contenedo-trending">
@@ -69,7 +68,7 @@
             <div class="contenedor-gif" >
                 <div class="barratop-sugerencias">
                     <h3 id="title2">#</h3>
-                    <a href="#" class="close">X</a>
+                    <a href="#" class="close"><img src="assets/close.svg"></a>
                 </div>
                 <button class="vermas-sugerencias">Ver Más...</button>
                 <img class="gif-sugerencias" id="contenedo-trending2">
@@ -77,7 +76,7 @@
             <div class="contenedor-gif" >
                 <div class="barratop-sugerencias">
                     <h3 id="title3">#</h3>
-                    <a href="#" class="close">X</a>
+                    <a href="#" class="close"><img src="assets/close.svg"></a>
                 </div>
                 <button class="vermas-sugerencias">Ver Más...</button>
                 <img class="gif-sugerencias" id="contenedo-trending3">
@@ -85,7 +84,7 @@
              <div class="contenedor-gif" >
                 <div class="barratop-sugerencias">
                     <h3 id="title4">#</h3>
-                    <a href="#" class="close">X</a>
+                    <a href="#" class="close"><img src="assets/close.svg"></a>
                 </div>
                 <button class="vermas-sugerencias">Ver Más...</button>
                 <img class="gif-sugerencias" id="contenedo-trending4">

@@ -22,9 +22,11 @@ header {
 
         .theme {
             margin-right: 5px;
+            
 
             .botonDrop {
                 margin-top: 7px;
+                background-color: transparent;
 
                 .button-dropdown {
                     @extend %btnRosa;

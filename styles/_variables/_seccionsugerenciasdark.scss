@@ -23,21 +23,18 @@ body {
                 padding-right: 5px;
             }
 
-            .close {
-                @extend %botonCerrarDark;
-            }
-            img{
-                width: 280px;
-                height: 245px;
-                overflow: hidden;
-            }
-
             .vermas-sugerencias {
                 @extend %btnVerSugerenciasDark;
                 padding: 5px;
                 margin: 10px;
-                float: bottom;
                 position: absolute;
+                margin-top: 220px;
+            }
+
+            .gif-sugerencias{
+                width: 280px;
+                height: 260px;
+                box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
             }
 
         }

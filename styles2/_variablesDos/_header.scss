@@ -1,20 +1,63 @@
-header{
+header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-content: center;
     margin: 30px;
 
-    .volver-atras{
-        i{
-            
+    .volver-atras {
+        i {
+            color: $color-borderButton;
         }
-        img{
+
+        .icono {
             content: url('assets/gifOF_logo.png');
-            width: 200px;
         }
     }
 
-    .elegir-tema{
+    .elegir-tema {
+        .btn-tema {
+            background-color: transparent;
+
+            a {
+                @extend %btnRosa;
+                width: 120px;
+
+            }
+
+            span {
+                @extend %btnRosa;
+            }
+
+        }
+
+        .drop2 {
+            display: none;
+            position: absolute;
+            background-color: $color-gray;
+            margin-top: 7px;
+            width: 127px;
+            background: $color-gray;
+            box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
+
+            li {
+                list-style-type: none;
+                text-decoration: none;
+                background: $color-backgrund;
+                //border: 1px solid $color-rosa;
+                box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 $color-white;
+                font-size: 16px;
+                color: $color-borderButton;
+                letter-spacing: 0;
+                line-height: 22px;
+                padding: 5px;
+                margin: 5px;
+
+                &:visited {
+                    color: $color-borderButton;
+                    text-decoration: none;
+                }
+            }
+        }
 
     }
-    
 }

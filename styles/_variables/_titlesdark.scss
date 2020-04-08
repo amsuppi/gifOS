@@ -1,4 +1,9 @@
 body {
+    h3{
+        white-space: nowrap;
+        overflow: hidden;
+        margin-right: 5px;
+    }
 
     h4 {
         @extend %barraTopDark;

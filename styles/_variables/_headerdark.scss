@@ -17,8 +17,10 @@ header {
         }
         .theme{
             margin-right: 5px;
+            
         .botonDrop{
             margin-top: 7px;
+            background-color: transparent;
             .button-dropdown {
                 @extend %btnFucsia;
                 width: 120px;
@@ -50,7 +52,7 @@ header {
             position: absolute;
             background-color: $color-gray;
             margin-top: 7px;
-            width: 127px;
+            width: 117px;
             background: $color-gray;
             box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
 

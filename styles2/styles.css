@@ -15,14 +15,58 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
   margin: 30px;
 }
 
-header .volver-atras img {
+header .volver-atras i {
+  color: #110038;
+}
+
+header .volver-atras .icono {
   content: url("assets/gifOF_logo.png");
-  width: 200px;
+}
+
+header .elegir-tema .btn-tema {
+  background-color: transparent;
+}
+
+header .elegir-tema .btn-tema a {
+  width: 120px;
+}
+
+header .elegir-tema .drop2 {
+  display: none;
+  position: absolute;
+  background-color: #E6E6E6;
+  margin-top: 7px;
+  width: 127px;
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+header .elegir-tema .drop2 li {
+  list-style-type: none;
+  text-decoration: none;
+  background: #FFF4FD;
+  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 22px;
+  padding: 5px;
+  margin: 5px;
+}
+
+header .elegir-tema .drop2 li:visited {
+  color: #110038;
+  text-decoration: none;
 }
 
 main {
@@ -188,7 +232,7 @@ main .capturarVideo .contenedorButtons .botones .subirgif {
   width: 120px;
 }
 
-main .contenedorGris .botones .btnComenzar, main .capturarVideo .contenedorButtons .botones .btnCapturar img, main .capturarVideo .contenedorButtons .botones .btnCapturar p, main .capturarVideo .contenedorButtons .botones .subirgif {
+header .elegir-tema .btn-tema a, header .elegir-tema .btn-tema span, main .contenedorGris .botones .btnComenzar, main .capturarVideo .contenedorButtons .botones .btnCapturar img, main .capturarVideo .contenedorButtons .botones .btnCapturar p, main .capturarVideo .contenedorButtons .botones .subirgif, .popup .contenedor-boton .btn-listo {
   background-color: #F7C9F3;
   border: solid 1px #110038;
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
@@ -202,7 +246,7 @@ main .contenedorGris .botones .btnComenzar, main .capturarVideo .contenedorButto
   text-decoration: none;
 }
 
-main .contenedorGris .botones .btnCancelar, main .capturarVideo .contenedorButtons .botones .repetirCaptura, main .capturarVideo .contenedorButtons .botones .cancelar {
+main .contenedorGris .botones .btnCancelar, main .capturarVideo .contenedorButtons .botones .repetirCaptura, main .capturarVideo .contenedorButtons .botones .cancelar, .popup .contenedor .botones button {
   background: #FFF4FD;
   border: 1px solid #110038;
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
@@ -258,6 +302,69 @@ main .capturarVideo .contenedorButtons .botones .bntListo img, main .capturarVid
           justify-content: space-between;
   overflow: hidden;
   margin: 10px;
+}
+
+.popup {
+  display: none;
+  width: 620px;
+  height: 320px;
+  margin: auto;
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.popup .barra-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.popup .contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 50px;
+}
+
+.popup .contenedor video {
+  width: 325px;
+  height: 160px;
+  background-color: red;
+  border: 1px solid #808080;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+          box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+}
+
+.popup .contenedor .botones button {
+  display: block;
+  width: 230px;
+  margin-top: 20px;
+}
+
+.popup .contenedor-boton {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.popup .contenedor-boton .btn-listo {
+  margin-right: 15px;
+  margin-top: 15px;
+  width: 120px;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin-top: 15px;
 }
 
 * {

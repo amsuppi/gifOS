@@ -1,6 +1,7 @@
 const common = 'styles/styles.css'
 const black = 'styles/stylesDark.css'
 
+
 // dropdown con opciones para seleccionar dark/light
 
 function dropFunction(){
@@ -18,10 +19,10 @@ function dropFunction(){
 function cambiarEstilos(id){
     if (id == "opcionRosa"){
         document.getElementById("archivoCss").href = common;
-        document.getElementById("logo").src = url(".../assets/");
+        document.getElementById("iconoLogo").src = "assets/logoceleste.png";
     } else{
         document.getElementById("archivoCss").href = black;
-        document.getElementById("logo-dark").style.display = "none";
+        document.getElementById("iconoLogo").src = "assets/logorosa.png";
     }
 
 }
@@ -48,8 +49,34 @@ function dropBuscar(){
 
     })
 
+ }
 
-   
+ function drop(){
+    var contentVideo = document.getElementById("drop2");
+
+    if (contentVideo.style.display == "none") {
+        contentVideo.style.display = "block";
+    } else {
+        contentVideo.style.display = "none";
+    } 
+ }
+
+
+
+ function cambiarEstilosVideo(id){
+
+    const rosa = 'styles2/styles.css'
+    const dark = 'styles2/stylesDark.css'
+
+    if (id == "opcionRosaVideo"){
+
+        document.getElementById("stylesCss").href = rosa;
+        document.getElementById("logo").src = "assets/logoceleste.png";
+    } else{
+        document.getElementById("stylesCss").href = dark;
+        document.getElementById("logo").src = "assets/logorosa.png";
+        
+    }
  }
 
 

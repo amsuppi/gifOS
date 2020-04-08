@@ -7,9 +7,11 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles2/stylesDark.css">
+    <link rel="stylesheet" href="styles2/styles.css" id="stylesCss">
 
+    <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/video.js"></script>
+    
     <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
     <title>Document</title>
 </head>
@@ -21,21 +23,24 @@
     <header>
         <div class="volver-atras">
         <i class="fas fa-arrow-left"></i>
-       <img class="icono" src="assets/gifOF_logo.png">
-       <!-- <img class="iconoDark" src="assets/gifOF_logo_dark.png">-->
+       <img class="icono" id="logo" src="assets/logoceleste.png">
     </div>
         <div class="elegir-tema">
-            <button class="btn-tema">
+            <button class="btn-tema" onclick="drop();">
                 <a>Elegir tema</a>
                 <span><img src="assets/dropdown.svg"></span>
             </button>
-            <ul id="drop2">
-                <li><a href="#">Sailor Day</a></li>
-                <li><a href="#">Sailor Night</a></li>
+            <ul class="drop2" id="drop2">
+                <li id="opcionRosaVideo" onclick="cambiarEstilosVideo(this.id)">Sailor Day</li>
+                <li id="opcionDarkVideo" onclick="cambiarEstilosVideo(this.id)">Sailor Night</li>
             </ul>
         </div>
     </header>
-    <main>
+    
+
+       
+        <main>
+        </div>
 
         <div class="contenedorGris" id="contenedorGris">
             <div class="barra-top">
@@ -105,6 +110,30 @@
                 </div>
             </div>
         </div>
+
+        <div class="popup" id="popup">
+            <div class="barra-top"><p>Guifo subio con exito</p> <img src="assets/close.svg" alt=""> </div>
+            <div class="contenedor">
+    
+                <video></video>
+    
+                <div class="botones">
+                    <h4>Guifo creado con exito</h4>
+                    <button>Copiar Enlace Guifo </button>
+                    <button>Descargar Guifo</button>
+                </div>
+            </div>
+
+            <div class="contenedor-boton">
+    
+            <button class="btn-listo">Listo</button>
+
+            </div>
+           
+            
+        </div>
+
+  
         <section class="seccionMisGifos">
                 <h2>Mis guifos</h2>
                 <div class="mis-gifos" id="mis-gifos">

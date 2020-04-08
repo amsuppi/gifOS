@@ -4,6 +4,7 @@ body {
         .gif-sugerencias {
             display: flex;
             justify-content: space-between;
+            
             .contenedor-gif {
                 width: 280px;
                 height: 280px;
@@ -16,9 +17,6 @@ body {
                 padding-left: 5px;
                 padding-right: 5px;
 
-                .close {
-                    @extend %botonCerrar;
-                }
             }
             .vermas-sugerencias {
                 
@@ -26,8 +24,8 @@ body {
                 padding: 5px;
                 margin: 10px;
                 position: absolute;
-                float: bottom;
                 vertical-align: bottom;
+                margin-top: 220px;
 
                 &:hover {
                     @extend %hoverAzul;

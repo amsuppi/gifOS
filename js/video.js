@@ -15,7 +15,7 @@ function activarCamara() {
         // Libreria RTC para grabar video
 
         var btnGrabar = document.getElementById("btnCapturar");
-        btnGrabar.addEventListener("click", ()=>{
+        btnGrabar.addEventListener("click", () => {
 
             navigator.mediaDevices.getUserMedia({
                 video: true
@@ -26,25 +26,23 @@ function activarCamara() {
                     quality: 10,
                     width: 360,
                     hidden: 240,
-        
+
                     onGifRecordingStarted: function () {
                         console.log('started')
                     },
                 });
                 recorder.startRecording();
-        
+
                 recorder.camera = stream;
-        
+
                 var btnGrabar = document.getElementById("btnCapturar");
                 var btnListo = document.getElementById("btnListo");
-        
+
                 btnGrabar.style.display = "none";
                 btnListo.style.display = "block";
-        
-            });
-        }
-    )
 
+            });
+        })
 
         var contenedorVideo = document.getElementById("capturarVideo");
         var contenedorGris = document.getElementById("contenedorGris");
@@ -53,37 +51,20 @@ function activarCamara() {
         contenedorVideo.style.display = "block";
     })
 
-    
-    }
 
-
-/*function cancelar(){
-    var btnCancelar = document.getElementById("cancelar");
-
-    btnCancelar.addEventListener("click", ()=>{
-
-        var contenedorGris = document.getElementById("contenedorGris");
-
-        contenedorGris.style.display = "none";
-    })
-}*/
-
-
-
+}
 
 
 //Parar parar de grabar
 function stop() {
 
     recorder.stopRecording(function () {
-        
+
         recorder.camera.stop();
-        //apagar camara y que se repita el gif
 
-        /*var blob = recorder.getBlob();
-            video.src = URL.createObjectURL(blob);
-            video.play();*/
+        video.srcObject = null;
 
+        video.src = URL.createObjectURL(recorder.getBlob());
 
         let form = new FormData();
 
@@ -98,6 +79,7 @@ function stop() {
         btnListo.style.display = "none";
         repetirCaptura.style.display = "block";
         botonSubir.style.display = "block";
+
 
 
         botonSubir.addEventListener("click", () => {
@@ -120,6 +102,12 @@ function stop() {
                 }).then(json => {
                     var gifId = json.data.id;
 
+                    var contenedorVideo = document.getElementById("capturarVideo");
+                    var popup = document.getElementById("popup");
+
+                    contenedorVideo.style.display = "none";
+                    popup.style.display = "block";
+
                     fetch('http://api.giphy.com/v1/gifs/' + gifId + '?api_key=NXLRwlrJclD68iUt0t49LYzzurK0KJxq&tag=q&rating=G')
                         .then(response => {
                             return response.json();
@@ -129,7 +117,7 @@ function stop() {
 
                                 localStorage.setItem('gif' + json.data.id, JSON.stringify(json));
 
-                                
+
 
                             })
                 })
@@ -140,7 +128,7 @@ function stop() {
         recorder = null;
     })
 
-    
+
 
 }
 
@@ -153,7 +141,7 @@ function misGifs() {
         var x = document.createElement("img");
         div.appendChild(x);
         var item = localStorage.getItem(localStorage.key(i));
-        if(item.includes('data')){
+        if (item.includes('data')) {
             var itemJson = JSON.parse(item);
 
             console.log(itemJson);

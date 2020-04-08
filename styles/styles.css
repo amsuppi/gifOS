@@ -39,6 +39,7 @@ header .contenedor-buttons .theme {
 
 header .contenedor-buttons .theme .botonDrop {
   margin-top: 7px;
+  background-color: transparent;
 }
 
 header .contenedor-buttons .theme .botonDrop .button-dropdown {
@@ -128,18 +129,6 @@ header .contenedor-buttons .crear-gifOS, header .contenedor-buttons .theme .boto
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-body .sugerencias .gif-sugerencias .barratop-sugerencias .close {
-  background-color: #E6E6E6;
-  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-  width: 15px;
-  height: 15px;
-  text-decoration: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 body .sugerencias .gif-sugerencias .vermas-sugerencias {
@@ -268,8 +257,8 @@ body .sugerencias .gif-sugerencias .vermas-sugerencias {
   padding: 5px;
   margin: 10px;
   position: absolute;
-  float: bottom;
   vertical-align: bottom;
+  margin-top: 220px;
 }
 
 body .sugerencias .gif-sugerencias .gif-sugerencias {
