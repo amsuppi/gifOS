@@ -72,9 +72,24 @@ header .contenedor-buttons .theme #drop1 li {
   margin: 5px;
 }
 
-header .contenedor-buttons .theme #drop1 li:visited {
-  color: #110038;
-  text-decoration: none;
+header .contenedor-buttons .theme #drop1 li:active {
+  background: #2E32FB;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+}
+
+header .contenedor-buttons .theme #drop1 li:hover {
+  background: #2E32FB;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: 0;
 }
 
 header .contenedor-buttons .lnk-gifOS {
@@ -87,8 +102,8 @@ header .contenedor-buttons .lnk-gifOS {
 }
 
 header .contenedor-buttons .lnk-gifOS::first-letter {
-  -webkit-text-decoration: underline 1px #FFFFFF;
-          text-decoration: underline 1px #FFFFFF;
+  -webkit-text-decoration: underline #FFFFFF;
+          text-decoration: underline #FFFFFF;
 }
 
 header .contenedor-buttons .lnk-gifOS:hover {
@@ -116,6 +131,22 @@ header .contenedor-buttons .crear-gifOS, header .contenedor-buttons .theme .boto
   text-decoration: none;
 }
 
+header .contenedor-buttons .crear-gifOS:hover, header .contenedor-buttons .theme .botonDrop .button-dropdown:hover, header .contenedor-buttons .theme .botonDrop span:hover {
+  border: 1px solid #110038;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+  background-color: #CE36DB;
+  cursor: pointer;
+}
+
+header .contenedor-buttons .crear-gifOS:active, header .contenedor-buttons .theme .botonDrop .button-dropdown:active, header .contenedor-buttons .theme .botonDrop span:active {
+  border: 1px solid #110038;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+  background-color: #CE36DB;
+  cursor: pointer;
+}
+
 .section-buscar button {
   background: #B4B4B4;
   border: 1px solid #808080;
@@ -138,12 +169,10 @@ body .sugerencias .gif-sugerencias .vermas-sugerencias {
   color: #FFFFFF;
 }
 
-header .contenedor-buttons .crear-gifOS:hover, header .contenedor-buttons .crear-gifOS:active, header .contenedor-buttons .theme .botonDrop .button-dropdown:hover, header .contenedor-buttons .theme .botonDrop .button-dropdown:active, header .contenedor-buttons .theme .botonDrop span:hover, header .contenedor-buttons .theme .botonDrop span:active {
-  border: 1px solid #110038;
+body .sugerencias .gif-sugerencias .vermas-sugerencias:hover {
+  background-color: #3A72DB;
   outline: 1px dotted #110038;
   outline-offset: -4px;
-  background-color: #CE36DB;
-  cursor: pointer;
 }
 
 .section-buscar {
@@ -258,6 +287,11 @@ body .sugerencias .gif-sugerencias .gif-sugerencias {
   height: 260px;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+body .sugerencias .gif-sugerencias .gif-sugerencias:hover {
+  outline: 2px dotted #110038;
+  outline-offset: -5px;
 }
 
 .tendencias {

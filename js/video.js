@@ -2,6 +2,7 @@ const url = "https://upload.giphy.com/v1/gifsapi_key=NXLRwlrJclD68iUt0t49LYzzurK
 
 let recorder;
 
+
 //Activar la camara de la computadora
 function activarCamara() {
     navigator.mediaDevices.getUserMedia({
@@ -54,7 +55,6 @@ function activarCamara() {
 
 }
 
-
 //Parar parar de grabar
 function stop() {
 
@@ -62,9 +62,16 @@ function stop() {
 
         recorder.camera.stop();
 
-        video.srcObject = null;
+        video.style.display = "none";
 
-        video.src = URL.createObjectURL(recorder.getBlob());
+        var div = document.getElementById("preview");
+        var img = document.createElement("img");
+        div.appendChild(img);
+
+        img.src = URL.createObjectURL(recorder.getBlob());
+
+        img.className = "img-gif";
+
 
         let form = new FormData();
 
@@ -79,10 +86,10 @@ function stop() {
         btnListo.style.display = "none";
         repetirCaptura.style.display = "block";
         botonSubir.style.display = "block";
+        
 
-
-
-        botonSubir.addEventListener("click", () => {
+        
+        botonSubir.addEventListener("click", (recorder) => {
 
             var video = document.querySelector("video");
             var progress = document.getElementById("pantallaProgress");
@@ -90,8 +97,9 @@ function stop() {
 
             video.style.display = "none";
             progress.style.display = "block";
+            img.style.display = "none";
 
-            /*barra de carga*/
+            
 
             fetch("https://upload.giphy.com/v1/gifs?api_key=NXLRwlrJclD68iUt0t49LYzzurK0KJxq&tag=q&rating=G", {
                     method: "POST",
@@ -100,13 +108,17 @@ function stop() {
                     return response.json();
 
                 }).then(json => {
-                    var gifId = json.data.id;
 
+                
+                    var gifId = json.data.id;
+                    
                     var contenedorVideo = document.getElementById("capturarVideo");
                     var popup = document.getElementById("popup");
 
                     contenedorVideo.style.display = "none";
                     popup.style.display = "block";
+
+                    
 
                     fetch('http://api.giphy.com/v1/gifs/' + gifId + '?api_key=NXLRwlrJclD68iUt0t49LYzzurK0KJxq&tag=q&rating=G')
                         .then(response => {
@@ -115,9 +127,26 @@ function stop() {
                             json => {
                                 console.log("Your gif" + gifId);
 
+                                var div = document.getElementById("mis-gifos");
+                                var x = document.createElement("img");
+                                div.appendChild(x);
+
+                                x.className = "img-gifs";
+
+                                x.src = json.data.images.original.url;
+
+                                var imagen = document.getElementById("img-preview");
+                                imagen.src = json.data.images.original.url;
+
+                                
+
+                                
+
                                 localStorage.setItem('gif' + json.data.id, JSON.stringify(json));
 
 
+
+                                
 
                             })
                 })
@@ -127,9 +156,6 @@ function stop() {
         recorder.destroy();
         recorder = null;
     })
-
-
-
 }
 
 
@@ -138,6 +164,7 @@ function misGifs() {
     for (let i = 0; i < localStorage.length; i++) {
 
         var div = document.getElementById("mis-gifos");
+
         var x = document.createElement("img");
         div.appendChild(x);
         var item = localStorage.getItem(localStorage.key(i));
@@ -155,44 +182,11 @@ function misGifs() {
 
 document.addEventListener("DOMContentLoaded", misGifs);
 
+function listo(){
+ 
+    var popup = document.getElementById("popup");
 
+    popup.style.display = "none";
 
-/*function stop(blobURL) { //no recibiría ningun parametro, no es necesario
-recorder.stopRecording(function () { //a la funcion callback la definiria aparte
-// necesitamos detener la grabacion -> recorder.camera.stop();
-let form = new FormData();
-form.append('file', recorder.getBlob(), blobURL); // cambiar blobURL por un string por ej. 'test.gif'
-console.log(form.get('file'))
-//acá le agregaría un handler al boton "Subir". si le hacen click entonces llamo a la función que hace el fetch
-//ejemplo
-//botonUpload.addEventListener('click', () => {
-// animar la barra de progreso
-// llamar a la funcion que hace el fetch -> uploadGif(form) y le paso el form como parametro
-//}
-//dentro de la funcion uploadGif(form) hago el fetch
-fetch("https://upload.giphy.com/v1/gifs?api_key=NXLRwlrJclD68iUt0t49LYzzurK0KJxq&tag=q&rating=G", {
-method: "POST",
-body : form
-}).then(response => {
-return response.json();
-}).then(
-json => {
-console.log (json);
-})
-.catch(error => console.error('Error:', error))
-//ademas agregaria un .then que reciba el reciba el id del gif subido
-//por ej. const giftId = data.data.id;
-//y luego llamaria a otra funcion que agregue en el localStorage los detalles del gif subido
-//por ej. despues del GET fetch dentro del.then(data => {
-// localStorage.setItem('gif' + data.data.id, JSON.stringify(data));
-//para mostrar esta info hago una funcion que recorra el localStorage y voy sacando los elementos y mostrandolo en la seccion mis guifos
-//Luego modifico el DOM para que no se muestren algunos botones
-//y por ultimo libero los recursos
-//recorder.destroy();
-//recorder = null;
-localStorage.setItem( form , "image/gif");
-var misGifs = localStorage.getItem(form);
-for (let i = 0; i < misGifs.length; i++) {
-console.log(misGifs[i]);
 }
-});*/
+

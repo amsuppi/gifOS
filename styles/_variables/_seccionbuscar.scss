@@ -3,7 +3,7 @@
     background-color: $color-gray;
     box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
     height: 100px;
-    
+
 
 
     input {
@@ -14,10 +14,10 @@
         height: 38px;
         padding-left: 10px;
         width: 90%;
-        
+
     }
 
-    #drop2{
+    #drop2 {
         display: none;
         position: absolute;
         background-color: $color-gray;
@@ -26,25 +26,35 @@
         margin-left: 10px;
         background: $color-gray;
         box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
-            li{
-                list-style-type: none;
-                text-decoration: none;
-                background: $color-backgrund;
-                border: 1px solid $color-rosa-claro;
-                box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 $color-white;
-                font-size: 16px;
-                color: $color-borderButton;
-                letter-spacing: 0;
-                line-height: 22px;
-                padding: 5px;
-                margin: 5px;
+
+        li {
+            list-style-type: none;
+            text-decoration: none;
+            background: $color-input;
+            border: 1px solid $color-borderDarkGray;
+            box-shadow: inset -1px -1px 0 0 $color-lightgray, inset 1px 1px 0 0 $color-white;
+            font-size: 16px;
+            color: $color-borderButton;
+            letter-spacing: 0;
+            line-height: 22px;
+            padding: 5px;
+            margin: 5px;
+
+            &:hover {
+                background: $color-gris-oscuro;
+                border: 1px solid $color-borderDarkGray;
+                box-shadow: inset -1px -1px 0 0 $color-lightgray, inset 1px 1px 0 0 $color-white;
+                outline: 1px dotted $color-borderDarkGray;
+                outline-offset: -4px;
+
             }
+        }
     }
 
-    button{
+    button {
         @extend %btnGris;
         display: inline;
         text-align: center;
-        
+
     }
 }

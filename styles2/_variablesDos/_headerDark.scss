@@ -1,38 +1,121 @@
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-content: center;
     margin: 30px;
 
-    .volver-atras{
-        i{
+    .volver-atras {
+        i {
             color: $color-white;
         }
-        .icono{
+
+        .icono {
             content: url('assets/gifOF_logo.png');
         }
     }
 
-    .elegir-tema{
-        .btn-tema{
-            background-color: transparent;
-            a{
-                @extend %btnFucsia;
-                width: 120px;
+    .contenedor-buttons {
+
+        display: flex;
+        align-items: center;
+
+        .crear-gifOS {
+            @extend %btnFucsia;
+            margin-right: 5px;
+        }
+
+        .elegir-tema {
+            .btn-tema {
+                background-color: transparent;
+
+                .tema{
+                    @extend %btnFucsia;
+                    width: 120px;
+
+                }
+
+                span {
+                    @extend %btnFucsia;
+                }
 
             }
-            span{
-                @extend %btnFucsia;
+
+
+            .drop2 {
+                display: none;
+                position: absolute;
+                background-color: $color-gray;
+                margin-top: 7px;
+                width: 127px;
+                background: $color-lightgray;
+                box-shadow: inset -2px -2px 0 0 $color-borderDarkGray, inset 2px 2px 0 0 $color-white;
+                -webkit-box-shadow: inset -2px -2px 0 0 $color-borderDarkGray, inset 2px 2px 0 0 $color-white;
+
+                li {
+                    list-style-type: none;
+                    text-decoration: none;
+                    background: $color-gray;
+                    border: 1px solid $color-borderDarkGray;
+                    box-shadow: inset -1px -1px 0 0 $color-lightgray, inset 1px 1px 0 0 $color-white;
+                    -webkit-box-shadow: inset -1px -1px 0 0 $color-lightgray, inset 1px 1px 0 0 $color-white;
+                    font-size: 16px;
+                    color: $color-borderButton;
+                    letter-spacing: 0;
+                    line-height: 22px;
+                    padding: 5px;
+                    margin: 5px;
+
+                    &:active {
+                        background: $color-darkBlue;
+                        border: 1px solid $color-borderButton;
+                        box-shadow: inset -1px -1px 0 0 $color-input-shadow, inset 1px 1px 0 0 $color-white;
+                        -webkit-box-shadow: inset -1px -1px 0 0 $color-input-shadow, inset 1px 1px 0 0 $color-white;
+                        font-size: 16px;
+                        color: #FFFFFF;
+                        letter-spacing: 0;
+                        // line-height: 22px;
+
+                    }
+
+                    &:hover {
+                        background: $color-darkBlue;
+                        border: 1px solid $color-borderButton;
+                        box-shadow: inset -1px -1px 0 0 $color-input-shadow, inset 1px 1px 0 0 $color-white;
+                        -webkit-box-shadow: inset -1px -1px 0 0 $color-input-shadow, inset 1px 1px 0 0 $color-white;
+                        font-size: 16px;
+                        color: #FFFFFF;
+                        letter-spacing: 0;
+                        // line-height: 22px;
+
+                    }
+                }
+
             }
 
         }
 
-        .drop2{
-            display: none;
-            position: absolute;
-            
+        .lnk-gifOS {
+            font-size: 16px;
+            color: $color-white;
+            letter-spacing: 0;
+            line-height: 18px;
+            padding: 5px;
+            text-decoration: none;
+
+            &::first-letter {
+                text-decoration: underline $color-white;
+            }
+
+            &:hover {
+                border: 1px dotted $color-white;
+
+            }
+
+            &:active {
+                color: $color-borderDarkGray;
+                border: none;
+            }
+
         }
-  
     }
-    
 }

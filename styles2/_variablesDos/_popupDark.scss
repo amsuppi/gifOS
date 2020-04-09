@@ -5,6 +5,7 @@
     margin: auto;
     background: $color-gray;
     box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
+    -webkit-box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
 
     .barra-top{
         @extend %barraTopDark;
@@ -17,12 +18,13 @@
         justify-content: space-around;
         margin-top: 50px;
 
-        video {
-            width: 325px;
+        .preview{
+            width: 300px;
             height: 160px;
-            background-color: red;
+            overflow: hidden;
             border: 1px solid $color-borderDarkGray;
             box-shadow: inset -2px -2px 0 0 $color-gray, inset 2px 2px 0 0 $color-black;
+            -webkit-box-shadow: inset -2px -2px 0 0 $color-gray, inset 2px 2px 0 0 $color-black;
         }
 
         .botones {

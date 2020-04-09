@@ -9,11 +9,11 @@
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles2/styles.css" id="stylesCss">
 
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/video.js"></script>
+    <script  src="js/main.js"></script>
+    <script  src="js/video.js"></script>
     
     <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
-    <title>Document</title>
+    <title>Mis guifos</title>
 </head>
 
 <body>
@@ -22,25 +22,34 @@
     </div>
     <header>
         <div class="volver-atras">
-        <i class="fas fa-arrow-left"></i>
-       <img class="icono" id="logo" src="assets/logoceleste.png">
+        <a href="index.html"> <i class="fas fa-arrow-left"></i></a>
+       <img class="icono" id="logo" src="assets/logoceleste.png" alt="logo">
     </div>
+
+    <div class="contenedor-buttons">
+        <a href="video.html" class="crear-gifOS">
+             Crear Guifos
+        </a>
         <div class="elegir-tema">
-            <button class="btn-tema" onclick="drop();">
-                <a>Elegir tema</a>
-                <span><img src="assets/dropdown.svg"></span>
+            <button class="btn-tema" onclick="drop();" >
+                <span class="tema">Elegir tema</span>
+
+                <span><img src="assets/dropdown.svg" alt="dropdown"></span>
             </button>
-            <ul class="drop2" id="drop2">
+            <ul class="drop2" id="dropdownVideo">
                 <li id="opcionRosaVideo" onclick="cambiarEstilosVideo(this.id)">Sailor Day</li>
                 <li id="opcionDarkVideo" onclick="cambiarEstilosVideo(this.id)">Sailor Night</li>
             </ul>
         </div>
+        <a class="lnk-gifOS" href="video.html">Mis Guifos</a>
+    </div>
+
     </header>
     
 
        
         <main>
-        </div>
+    
 
         <div class="contenedorGris" id="contenedorGris">
             <div class="barra-top">
@@ -76,14 +85,17 @@
                  <p>Vista previa</p>  
             </div>
 
-            <video src="" id="video"></video>
+            <video id="video"></video>
+            <div id="preview"></div>
 
             <div id="pantallaProgress" class="pantallaProgress">
 
-                <div>
-                    <img src="assets/globe_img.png">
+                <div class="contenido">
+                    <img src="assets/globe_img.png" alt="glogo cargando">
                     <h4>Estamos subiendo tu guifo…</h4>
-                    <div id="barraCarga"></div>
+                    <div class="barra-carga" id="barraCarga">
+                        <div class="containerProgress"></div>
+                    </div>
                     <p>Tiempo restante: 38 años algunos minutos</p>
                 </div>    
 
@@ -98,12 +110,12 @@
 
                 <div class="botones">
                     <button class="btnCapturar" id="btnCapturar">
-                        <img src="assets/camera.svg" alt="">
-                        <p>Capturar</p></button>
-                    <button onclick="stop();" class="bntListo" id="btnListo">
-                        <img src="assets/recording.svg">
-                        <p>Listo</p>
-                        </button>
+                        <img src="assets/camera.svg" alt="camara">
+                        <span>Capturar</span></button>
+                    <div class="cont-btn" onclick="stop();" id="btnListo"><button class="bntListo" >
+                        <img src="assets/recording.svg" alt="cargando">
+                        <span>Listo</span>
+                        </button></div>
                     <button class="cancelar" id="cancelar">Cancelar</button>
                     <button class="repetirCaptura" id="repetirCaptura">Repetir Captura</button>
                     <button class="subirgif" id="subirGifo">Subir Guifo</button>
@@ -112,10 +124,11 @@
         </div>
 
         <div class="popup" id="popup">
-            <div class="barra-top"><p>Guifo subio con exito</p> <img src="assets/close.svg" alt=""> </div>
-            <div class="contenedor">
-    
-                <video></video>
+            <div class="barra-top"><p>Guifo subio con exito</p> <img src="assets/close.svg" alt="cerrar"> </div>
+            <div class="contenedor" id="contenedor">
+
+                <img class="preview" src="about:blank" id="img-preview" alt="preview">
+           
     
                 <div class="botones">
                     <h4>Guifo creado con exito</h4>
@@ -126,7 +139,7 @@
 
             <div class="contenedor-boton">
     
-            <button class="btn-listo">Listo</button>
+            <button class="btn-listo" onclick="listo()">Listo</button>
 
             </div>
            

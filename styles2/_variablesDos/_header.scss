@@ -14,11 +14,22 @@ header {
         }
     }
 
+    .contenedor-buttons{
+
+        display: flex;
+        align-items: center;
+
+        .crear-gifOS{
+            @extend %btnRosa;
+            margin-right: 5px;
+        }
+
     .elegir-tema {
+        margin-right: 5px;
         .btn-tema {
             background-color: transparent;
 
-            a {
+            .tema {
                 @extend %btnRosa;
                 width: 120px;
 
@@ -38,6 +49,7 @@ header {
             width: 127px;
             background: $color-gray;
             box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
+            -webkit-box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
 
             li {
                 list-style-type: none;
@@ -45,6 +57,7 @@ header {
                 background: $color-backgrund;
                 //border: 1px solid $color-rosa;
                 box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 $color-white;
+                -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 $color-white;
                 font-size: 16px;
                 color: $color-borderButton;
                 letter-spacing: 0;
@@ -53,11 +66,44 @@ header {
                 margin: 5px;
 
                 &:visited {
-                    color: $color-borderButton;
-                    text-decoration: none;
+                    background: $color-input;
+                    border: 1px solid $color-borderDarkGray;
+                    box-shadow: inset -1px -1px 0 0 $color-lightgray, inset 1px 1px 0 0 $color-white;
+                    -webkit-box-shadow: inset -1px -1px 0 0 $color-lightgray, inset 1px 1px 0 0 $color-white;
+                }
+
+                &:hover {
+                    background: $color-input;
+                    border: 1px solid $color-borderDarkGray;
+                    box-shadow: inset -1px -1px 0 0 $color-lightgray, inset 1px 1px 0 0 $color-white;
+                    -webkit-box-shadow: inset -1px -1px 0 0 $color-lightgray, inset 1px 1px 0 0 $color-white;
                 }
             }
         }
 
     }
+
+    .lnk-gifOS{
+        font-size: 16px;
+        color: $color-borderButton;
+        letter-spacing: 0;
+        line-height: 18px;
+        padding: 5px;
+        text-decoration: none;
+
+        &::first-letter {
+            text-decoration: underline $color-borderButton;
+        }
+
+        &:hover {
+            border: 1px dotted $color-borderButton;
+
+        }
+
+        &:active {
+            color: $color-borderDarkGray;
+            border: none;
+        }
+    }
+}
 }

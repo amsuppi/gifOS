@@ -7,6 +7,7 @@ main{
         width: 600px;
         background: $color-lightgray;
         box-shadow: inset -2px -2px 0 0 $color-borderDarkGray, inset 2px 2px 0 0 $color-white;
+        -webkit-box-shadow: inset -2px -2px 0 0 $color-borderDarkGray, inset 2px 2px 0 0 $color-white;
         margin: auto;
 
        .contTitulo{
@@ -53,14 +54,25 @@ main{
         display: none;
         width: 700px;
         box-shadow: inset -2px -2px 0 0 $color-borderDarkGray, inset 2px 2px 0 0 $color-white;
+        -webkit-box-shadow: inset -2px -2px 0 0 $color-borderDarkGray, inset 2px 2px 0 0 $color-white;
         margin: auto;
         background-color: $color-lightgray;
         
 
         video{
-            width: 95%;
-            height: 440px;
-            margin: 5px auto;
+            width: 98%;
+            margin: 5px;
+        }
+
+        .img-gif{
+            width:98%;
+            height: 100%;
+            margin: auto;
+            margin-top: 5px;
+            margin-left: 7px;
+            border: 1px solid $color-lightgray;
+            box-shadow: inset -2px -2px 0 0 $color-gray, inset 2px 2px 0 0 $color-black;
+            -webkit-box-shadow: inset -2px -2px 0 0 $color-gray, inset 2px 2px 0 0 $color-black;
         }
 
         .pantallaProgress{
@@ -71,6 +83,7 @@ main{
             margin: 5px auto;
             border: 1px solid $color-borderDarkGray;
             box-shadow: inset -2px -2px 0 0 $color-gray, inset 2px 2px 0 0 $color-black;
+            -webkit-box-shadow: inset -2px -2px 0 0 $color-gray, inset 2px 2px 0 0 $color-black;
             text-align: center;
             justify-content: center;
             align-items: center;
@@ -97,7 +110,7 @@ main{
 
                     }
 
-                    p{
+                    span{
                         @extend %btnFucsia;
                         align-items: center;
                         width: 120px;
@@ -105,19 +118,21 @@ main{
                     
                 }
     
-                .bntListo{
+                .cont-btn{
                     display: none;
-                    
+                    .bntListo{
+                        display: flex;
 
                     img{
                         @extend %btnListoDark;
                         padding: 5px 10px;
                     }
-                    p{
+                    span{
                         @extend %btnListoDark;
                         align-items: center;
                         width: 120px;
                     }
+                }
                 }
                 .repetirCaptura{
                     display: none;

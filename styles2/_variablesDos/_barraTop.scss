@@ -1,5 +1,6 @@
 %barraTop{
     background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    background: -webkit-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
     box-shadow: 0 1px 0 0 $color-borderButton;
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 700;
@@ -10,6 +11,7 @@
 }
 %barraTopDark{
     background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+    background-image: -webkit-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
     box-shadow: 0 1px 0 0 $color-borderButton;
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 700;
@@ -17,4 +19,17 @@
     font-size: 12px;
     color: $color-white;
     letter-spacing: 0;
+}
+
+%barraBottom{
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    background-image: -webkit-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    box-shadow: 0 1px 0 0 $color-borderButton;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 700;
+    padding: 5px;
+    font-size: 12px;
+    color: $color-white;
+    letter-spacing: 0;
+    position: absolute;
 }

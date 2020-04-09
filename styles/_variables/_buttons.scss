@@ -9,6 +9,21 @@
     text-align: center;
     line-height: 18px;
     text-decoration: none;
+
+    &:hover{
+        border: 1px solid $color-borderButton;
+        outline: 1px dotted $color-borderButton;
+        outline-offset: -4px;
+        background-color: $color-rosa-oscuro;
+        cursor: pointer;
+    }
+    &:active{
+        border: 1px solid $color-borderButton;
+        outline: 1px dotted $color-borderButton;
+        outline-offset: -4px;
+        background-color: $color-rosa-oscuro;
+        cursor: pointer;
+    }
 }
 
 %btnGris {
@@ -35,6 +50,12 @@
     border: 0.5px solid $color-violeta;
     box-shadow: inset -2px -2px 0 0 $color-azul, inset 2px 2px 0 0 $color-white;
     color: $color-white;
+
+    &:hover{
+        background-color: $color-azul-hover;
+    outline: 1px dotted $color-borderButton;
+    outline-offset: -4px;
+    }
 }
 
 /*DARK PARTÇ*/
@@ -51,6 +72,21 @@
     text-align: center;
     line-height: 18px;
     text-decoration: none;
+
+    &:hover{
+        border: 1px solid $color-borderButton;
+        outline: 1px dotted $color-borderButton;
+        outline-offset: -4px;
+        background-color: $color-hover-dark;
+        cursor: pointer;
+    }
+    &:active{
+        border: 1px solid $color-borderButton;
+        outline: 1px dotted $color-borderButton;
+        outline-offset: -4px;
+        background-color: $color-hover-dark;
+        cursor: pointer;
+    }
 }
 
 %btnGrisDark {
@@ -79,27 +115,10 @@
     border: 1px solid $color-violeta;
     box-shadow: inset -2px -2px 0 0 $color-azul, inset 2px 2px 0 0 $color-white;
     color: $color-white;
-}
 
-// HOVERS
-
-%hoverRosa {
-    border: 1px solid $color-borderButton;
+    &:hover{
+        background-color: $color-azul-hover;
     outline: 1px dotted $color-borderButton;
     outline-offset: -4px;
-    background-color: $color-rosa-oscuro;
-    cursor: pointer;
-}
-%hoverFucsia {
-    border: 1px solid $color-borderButton;
-    outline: 1px dotted $color-borderButton;
-    outline-offset: -4px;
-    background-color: $color-hover-dark;
-    cursor: pointer;
-}
-
-%hoverAzul {
-    background-color: $color-azul-hover;
-    outline: 1px dotted $color-borderButton;
-    outline-offset: -4px;
+    }
 }

@@ -11,13 +11,6 @@ header {
             margin-right: 5px;
             @extend %btnRosa;
 
-            &:hover {
-                @extend %hoverRosa;
-            }
-
-            &:active {
-                @extend %hoverRosa;
-            }
         }
 
         .theme {
@@ -32,13 +25,6 @@ header {
                     @extend %btnRosa;
                     width: 120px;
 
-                    &:hover {
-                        @extend %hoverRosa;
-                    }
-
-                    &:active {
-                        @extend %hoverRosa;
-                    }
                 }
 
                 span {
@@ -46,14 +32,6 @@ header {
 
                     img {
                         margin: auto;
-                    }
-
-                    &:hover {
-                        @extend %hoverRosa;
-                    }
-
-                    &:active {
-                        @extend %hoverRosa;
                     }
                 }
             }
@@ -80,9 +58,16 @@ header {
                     padding: 5px;
                     margin: 5px;
 
-                    &:visited{
-                        color: $color-borderButton;
-                        text-decoration: none;
+                    &:visited {
+                        background: $color-input;
+                        border: 1px solid $color-borderDarkGray;
+                        box-shadow: inset -1px -1px 0 0 $color-lightgray, inset 1px 1px 0 0 $color-white;
+                    }
+    
+                    &:hover {
+                        background: $color-input;
+                        border: 1px solid $color-borderDarkGray;
+                        box-shadow: inset -1px -1px 0 0 $color-lightgray, inset 1px 1px 0 0 $color-white;
                     }
                 }
             }
@@ -97,7 +82,7 @@ header {
             text-decoration: none;
 
             &::first-letter {
-                text-decoration: underline 1px $color-borderButton;
+                text-decoration: underline $color-borderButton;
             }
 
             &:hover {

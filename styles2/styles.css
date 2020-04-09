@@ -1,6 +1,7 @@
 body .barra-top {
   background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
   background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  background: -webkit-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
   -webkit-box-shadow: 0 1px 0 0 #110038;
           box-shadow: 0 1px 0 0 #110038;
   font-family: 'Chakra Petch', sans-serif;
@@ -31,31 +32,48 @@ header .volver-atras .icono {
   content: url("assets/gifOF_logo.png");
 }
 
-header .elegir-tema .btn-tema {
+header .contenedor-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .contenedor-buttons .crear-gifOS {
+  margin-right: 5px;
+}
+
+header .contenedor-buttons .elegir-tema {
+  margin-right: 5px;
+}
+
+header .contenedor-buttons .elegir-tema .btn-tema {
   background-color: transparent;
 }
 
-header .elegir-tema .btn-tema a {
+header .contenedor-buttons .elegir-tema .btn-tema .tema {
   width: 120px;
 }
 
-header .elegir-tema .drop2 {
+header .contenedor-buttons .elegir-tema .drop2 {
   display: none;
   position: absolute;
   background-color: #E6E6E6;
   margin-top: 7px;
   width: 127px;
   background: #E6E6E6;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
 
-header .elegir-tema .drop2 li {
+header .contenedor-buttons .elegir-tema .drop2 li {
   list-style-type: none;
   text-decoration: none;
   background: #FFF4FD;
+  box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
   -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
   font-size: 16px;
   color: #110038;
   letter-spacing: 0;
@@ -64,9 +82,41 @@ header .elegir-tema .drop2 li {
   margin: 5px;
 }
 
-header .elegir-tema .drop2 li:visited {
+header .contenedor-buttons .elegir-tema .drop2 li:visited {
+  background: #FFFAFE;
+  border: 1px solid #808080;
+  box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+header .contenedor-buttons .elegir-tema .drop2 li:hover {
+  background: #FFFAFE;
+  border: 1px solid #808080;
+  box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+header .contenedor-buttons .lnk-gifOS {
+  font-size: 16px;
   color: #110038;
+  letter-spacing: 0;
+  line-height: 18px;
+  padding: 5px;
   text-decoration: none;
+}
+
+header .contenedor-buttons .lnk-gifOS::first-letter {
+  -webkit-text-decoration: underline #110038;
+          text-decoration: underline #110038;
+}
+
+header .contenedor-buttons .lnk-gifOS:hover {
+  border: 1px dotted #110038;
+}
+
+header .contenedor-buttons .lnk-gifOS:active {
+  color: #808080;
+  border: none;
 }
 
 main {
@@ -134,16 +184,26 @@ main .contenedorGris .botones .btnCancelar {
 main .capturarVideo {
   display: none;
   width: 700px;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
   margin: auto;
   background-color: #E6E6E6;
 }
 
 main .capturarVideo video {
-  width: 95%;
-  height: 440px;
-  margin: 5px auto;
+  width: 98%;
+  margin: 5px;
+}
+
+main .capturarVideo .img-gif {
+  width: 98%;
+  height: 100%;
+  margin: auto;
+  margin-top: 5px;
+  margin-left: 7px;
+  border: 1px solid #B4B4B4;
+  box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
 }
 
 main .capturarVideo .pantallaProgress {
@@ -153,8 +213,8 @@ main .capturarVideo .pantallaProgress {
   height: 400px;
   margin: 5px auto;
   border: 1px solid #808080;
+  box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
   -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
-          box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
   text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -162,6 +222,48 @@ main .capturarVideo .pantallaProgress {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+main .capturarVideo .pantallaProgress .contenido {
+  margin-top: 20%;
+}
+
+main .capturarVideo .pantallaProgress .barra-carga {
+  width: 240px;
+  height: 20px;
+  background: #B4B4B4;
+  border: 1px solid #979797;
+  box-shadow: inset 2px 2px 0 0 #E6E6E6, inset -2px -2px 0 0;
+  -webkit-box-shadow: inset 2px 2px 0 0 #E6E6E6, inset -2px -2px 0 0;
+  margin: 5px auto;
+}
+
+main .capturarVideo .pantallaProgress .barra-carga .containerProgress {
+  height: 18px;
+  -webkit-animation: progress 5s infinite;
+          animation: progress 5s infinite;
+}
+
+@-webkit-keyframes progress {
+  0% {
+    background: #F7C9F3;
+    width: 0%;
+  }
+  100% {
+    background: #F7C9F3;
+    width: 100%;
+  }
+}
+
+@keyframes progress {
+  0% {
+    background: #F7C9F3;
+    width: 0%;
+  }
+  100% {
+    background: #F7C9F3;
+    width: 100%;
+  }
 }
 
 main .capturarVideo .contenedorButtons {
@@ -194,22 +296,28 @@ main .capturarVideo .contenedorButtons .botones .btnCapturar {
   display: flex;
 }
 
-main .capturarVideo .contenedorButtons .botones .btnCapturar p {
+main .capturarVideo .contenedorButtons .botones .btnCapturar span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 120px;
 }
 
-main .capturarVideo .contenedorButtons .botones .bntListo {
+main .capturarVideo .contenedorButtons .botones .cont-btn {
   display: none;
 }
 
-main .capturarVideo .contenedorButtons .botones .bntListo img {
+main .capturarVideo .contenedorButtons .botones .cont-btn .bntListo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .capturarVideo .contenedorButtons .botones .cont-btn .bntListo img {
   padding: 5px 10px;
 }
 
-main .capturarVideo .contenedorButtons .botones .bntListo p {
+main .capturarVideo .contenedorButtons .botones .cont-btn .bntListo span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -232,11 +340,11 @@ main .capturarVideo .contenedorButtons .botones .subirgif {
   width: 120px;
 }
 
-header .elegir-tema .btn-tema a, header .elegir-tema .btn-tema span, main .contenedorGris .botones .btnComenzar, main .capturarVideo .contenedorButtons .botones .btnCapturar img, main .capturarVideo .contenedorButtons .botones .btnCapturar p, main .capturarVideo .contenedorButtons .botones .subirgif, .popup .contenedor-boton .btn-listo {
+header .contenedor-buttons .crear-gifOS, header .contenedor-buttons .elegir-tema .btn-tema .tema, header .contenedor-buttons .elegir-tema .btn-tema span, main .contenedorGris .botones .btnComenzar, main .capturarVideo .contenedorButtons .botones .btnCapturar img, main .capturarVideo .contenedorButtons .botones .btnCapturar span, main .capturarVideo .contenedorButtons .botones .subirgif, .popup .contenedor-boton .btn-listo {
   background-color: #F7C9F3;
   border: solid 1px #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
   padding: 7px;
   font-size: 14px;
   color: #110038;
@@ -244,13 +352,29 @@ header .elegir-tema .btn-tema a, header .elegir-tema .btn-tema span, main .conte
   text-align: center;
   line-height: 18px;
   text-decoration: none;
+}
+
+header .contenedor-buttons .crear-gifOS:hover, header .contenedor-buttons .elegir-tema .btn-tema .tema:hover, header .contenedor-buttons .elegir-tema .btn-tema span:hover, main .contenedorGris .botones .btnComenzar:hover, main .capturarVideo .contenedorButtons .botones .btnCapturar img:hover, main .capturarVideo .contenedorButtons .botones .btnCapturar span:hover, main .capturarVideo .contenedorButtons .botones .subirgif:hover, .popup .contenedor-boton .btn-listo:hover {
+  border: 1px solid #110038;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+  background-color: #E6BBE2;
+  cursor: pointer;
+}
+
+header .contenedor-buttons .crear-gifOS:active, header .contenedor-buttons .elegir-tema .btn-tema .tema:active, header .contenedor-buttons .elegir-tema .btn-tema span:active, main .contenedorGris .botones .btnComenzar:active, main .capturarVideo .contenedorButtons .botones .btnCapturar img:active, main .capturarVideo .contenedorButtons .botones .btnCapturar span:active, main .capturarVideo .contenedorButtons .botones .subirgif:active, .popup .contenedor-boton .btn-listo:active {
+  border: 1px solid #110038;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+  background-color: #E6BBE2;
+  cursor: pointer;
 }
 
 main .contenedorGris .botones .btnCancelar, main .capturarVideo .contenedorButtons .botones .repetirCaptura, main .capturarVideo .contenedorButtons .botones .cancelar, .popup .contenedor .botones button {
-  background: #FFF4FD;
+  background: #F0E5EE;
   border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
   padding: 7px;
   font-size: 14px;
   color: #110038;
@@ -260,11 +384,19 @@ main .contenedorGris .botones .btnCancelar, main .capturarVideo .contenedorButto
   text-decoration: none;
 }
 
-main .capturarVideo .contenedorButtons .botones .bntListo img, main .capturarVideo .contenedorButtons .botones .bntListo p {
+main .contenedorGris .botones .btnCancelar:hover, main .capturarVideo .contenedorButtons .botones .repetirCaptura:hover, main .capturarVideo .contenedorButtons .botones .cancelar:hover, .popup .contenedor .botones button:hover {
+  border: 1px solid #110038;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+  background-color: #E6DCE4;
+  cursor: pointer;
+}
+
+main .capturarVideo .contenedorButtons .botones .cont-btn .bntListo img, main .capturarVideo .contenedorButtons .botones .cont-btn .bntListo span {
   background: #FF6161;
   border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
   -webkit-box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
   padding: 7px;
   font-size: 14px;
   color: #110038;
@@ -281,8 +413,8 @@ main .capturarVideo .contenedorButtons .botones .bntListo img, main .capturarVid
 .seccionMisGifos h2 {
   background: #FFFAFE;
   border: 1px solid #E6BBE2;
+  box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #E6BBE2;
   -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #E6BBE2;
-          box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #E6BBE2;
   font-size: 14px;
   font-weight: normal;
   color: #110038;
@@ -291,16 +423,17 @@ main .capturarVideo .contenedorButtons .botones .bntListo img, main .capturarVid
   letter-spacing: 0;
 }
 
-.seccionMisGifos .mis-gifs {
+.seccionMisGifos .mis-gifos {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+}
+
+.seccionMisGifos .mis-gifos .img-gifs {
   width: 280px;
   height: 280px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  overflow: hidden;
   margin: 10px;
 }
 
@@ -310,8 +443,8 @@ main .capturarVideo .contenedorButtons .botones .bntListo img, main .capturarVid
   height: 320px;
   margin: auto;
   background: #E6E6E6;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
 
 .popup .barra-top {
@@ -332,13 +465,13 @@ main .capturarVideo .contenedorButtons .botones .bntListo img, main .capturarVid
   margin-top: 50px;
 }
 
-.popup .contenedor video {
-  width: 325px;
+.popup .contenedor .preview {
+  width: 300px;
   height: 160px;
-  background-color: red;
+  overflow: hidden;
   border: 1px solid #808080;
+  box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
   -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
-          box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
 }
 
 .popup .contenedor .botones button {

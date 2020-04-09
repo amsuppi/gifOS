@@ -57,6 +57,10 @@ fetch(trending)
             x.src = json.data[i].images.original.url;
             x.className = "img-gif";
             x.id = "img-gif-tendencias";
+
+            var hover = document.createElement("div");
+            hover.className = "barra-bottom";
+            div.appendChild(hover);
         }
     })
     .catch(error => {
@@ -77,16 +81,46 @@ function buscarTend(){
 
 }
 
-function buscarOpciones(id){
+function buscarOpciones(textContent){
 
-        console.log (id.textContent);
+        let valor = textContent;
 
+    
+        var myHeaders = new Headers();
+    
+
+        fetch('https://api.giphy.com/v1/gifs/search?' + '&api_key=' + 
+            apiKey + "&q=" + valor + "&limit=25&offset=0&rating=G&lang=es",{
+                method: 'GET',
+                headers: myHeaders
+            })
+        .then(response => {
+            return response.json();
+        })
+        .then(json => {
+            console.log (json);
+
+            for (let i = 0; i < json.data.length; i++) {
         
+            console.log(json.data[i].images.original.url);
+
+            
+            var div = document.getElementById("contenedo-tendencias");
+            var x = document.getElementById("img-gif-tendencias");
+            div.removeChild(x);
+            var y = document.createElement("img");
+            y.src = json.data[i].images.original.url;
+            y.className = "img-gif";
+            y.id = "img-gif-tendencias";
+            div.appendChild(y);
+
+            }
+        })
+        .catch(error => {
+            return error;
+        });
 
 }
-   
-
-
 
 //search
 
@@ -113,11 +147,12 @@ function llamar(){
 
             var div = document.getElementById("contenedo-tendencias");
             var x = document.getElementById("img-gif-tendencias")
+            div.removeChild(x);
             var y = document.createElement("img");
             y.src = json.data[i].images.original.url;
             y.className = "img-gif";
-            y.id = "img-gif-search";
-            div.replaceChild(y, x);
+            y.id = "img-gif-tendencias";
+            div.appendChild(y);
 
             }
         })

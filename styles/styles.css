@@ -77,8 +77,17 @@ header .contenedor-buttons .theme #drop1 li {
 }
 
 header .contenedor-buttons .theme #drop1 li:visited {
-  color: #110038;
-  text-decoration: none;
+  background: #FFFAFE;
+  border: 1px solid #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+header .contenedor-buttons .theme #drop1 li:hover {
+  background: #FFFAFE;
+  border: 1px solid #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
 header .contenedor-buttons .lnk-gifOS {
@@ -91,8 +100,8 @@ header .contenedor-buttons .lnk-gifOS {
 }
 
 header .contenedor-buttons .lnk-gifOS::first-letter {
-  -webkit-text-decoration: underline 1px #110038;
-          text-decoration: underline 1px #110038;
+  -webkit-text-decoration: underline #110038;
+          text-decoration: underline #110038;
 }
 
 header .contenedor-buttons .lnk-gifOS:hover {
@@ -118,6 +127,22 @@ header .contenedor-buttons .crear-gifOS, header .contenedor-buttons .theme .boto
   text-decoration: none;
 }
 
+header .contenedor-buttons .crear-gifOS:hover, header .contenedor-buttons .theme .botonDrop .button-dropdown:hover, header .contenedor-buttons .theme .botonDrop span:hover {
+  border: 1px solid #110038;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+  background-color: #E6BBE2;
+  cursor: pointer;
+}
+
+header .contenedor-buttons .crear-gifOS:active, header .contenedor-buttons .theme .botonDrop .button-dropdown:active, header .contenedor-buttons .theme .botonDrop span:active {
+  border: 1px solid #110038;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+  background-color: #E6BBE2;
+  cursor: pointer;
+}
+
 .section-buscar button {
   background: #E6E6E6;
   border: 1px solid #808080;
@@ -139,21 +164,13 @@ body .sugerencias .gif-sugerencias .vermas-sugerencias {
   color: #FFFFFF;
 }
 
-/*DARK PARTÇ*/
-header .contenedor-buttons .crear-gifOS:hover, header .contenedor-buttons .crear-gifOS:active, header .contenedor-buttons .theme .botonDrop .button-dropdown:hover, header .contenedor-buttons .theme .botonDrop .button-dropdown:active, header .contenedor-buttons .theme .botonDrop span:hover, header .contenedor-buttons .theme .botonDrop span:active {
-  border: 1px solid #110038;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-  background-color: #E6BBE2;
-  cursor: pointer;
-}
-
 body .sugerencias .gif-sugerencias .vermas-sugerencias:hover {
   background-color: #3A72DB;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
+/*DARK PARTÇ*/
 .section-buscar {
   margin: 20px 50px 0px 50px;
   background-color: #E6E6E6;
@@ -188,16 +205,25 @@ body .sugerencias .gif-sugerencias .vermas-sugerencias:hover {
 .section-buscar #drop2 li {
   list-style-type: none;
   text-decoration: none;
-  background: #FFF4FD;
-  border: 1px solid #CCA6C9;
-  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+  background: #FFFAFE;
+  border: 1px solid #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
   font-size: 16px;
   color: #110038;
   letter-spacing: 0;
   line-height: 22px;
   padding: 5px;
   margin: 5px;
+}
+
+.section-buscar #drop2 li:hover {
+  background: #DBDBDB;
+  border: 1px solid #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+  outline: 1px dotted #808080;
+  outline-offset: -4px;
 }
 
 .section-buscar button {
@@ -268,6 +294,11 @@ body .sugerencias .gif-sugerencias .gif-sugerencias {
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
 
+body .sugerencias .gif-sugerencias .gif-sugerencias:hover {
+  outline: 2px dotted #110038;
+  outline-offset: -5px;
+}
+
 .tendencias {
   margin: 20px 50px 30px 50px;
 }
@@ -282,23 +313,12 @@ body .sugerencias .gif-sugerencias .gif-sugerencias {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  /*.barra-bottom {
-            @extend %barraTop;
-            align-self: flex-end;
-            align-items: flex-end;
-            -ms-flex-align: end;
-        }*/
 }
 
 .tendencias .contenedor-gif .img-gif {
   width: 280px;
   height: 280px;
   margin-bottom: 20px;
-}
-
-.tendencias .contenedor-gif .img-gif:hover {
-  outline: 2px dotted #110038;
-  outline-offset: -5px;
 }
 
 * {

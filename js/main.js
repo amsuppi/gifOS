@@ -52,7 +52,7 @@ function dropBuscar(){
  }
 
  function drop(){
-    var contentVideo = document.getElementById("drop2");
+    var contentVideo = document.getElementById("dropdownVideo");
 
     if (contentVideo.style.display == "none") {
         contentVideo.style.display = "block";

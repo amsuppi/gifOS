@@ -35,6 +35,11 @@ body {
                 width: 280px;
                 height: 260px;
                 box-shadow: inset -2px -2px 0 0 $color-lightgray, inset 2px 2px 0 0 $color-white;
+
+                &:hover{
+                    outline: 2px dotted $color-borderButton;
+                    outline-offset: -5px;
+                }
             }
 
         }

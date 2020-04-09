@@ -8,21 +8,11 @@
         justify-content: space-between;
 
 
-        /*.barra-bottom {
-            @extend %barraTop;
-            align-self: flex-end;
-            align-items: flex-end;
-            -ms-flex-align: end;
-        }*/
-
         .img-gif{
             width: 280px;
             height: 280px;
             margin-bottom: 20px;
-        &:hover {
-            outline: 2px dotted $color-borderButton;
-            outline-offset: -5px;
-        }
+           
         }
         
     }

@@ -2,6 +2,7 @@
     background-color: $color-button;
     border: solid 1px $color-borderButton;
     box-shadow: inset -1px -1px 0 0 $color-shadow, inset 1px 1px 0 0 $color-white;
+    -webkit-box-shadow: inset -1px -1px 0 0 $color-shadow, inset 1px 1px 0 0 $color-white;
     padding: 7px;
     font-size: 14px;
     color: $color-borderButton;
@@ -9,12 +10,29 @@
     text-align: center;
     line-height: 18px;
     text-decoration: none;
+
+    &:hover{
+        border: 1px solid $color-borderButton;
+        outline: 1px dotted $color-borderButton;
+        outline-offset: -4px;
+        background-color: $color-rosa-oscuro;
+        cursor: pointer;
+    }
+
+    &:active{
+        border: 1px solid $color-borderButton;
+        outline: 1px dotted $color-borderButton;
+        outline-offset: -4px;
+        background-color: $color-rosa-oscuro;
+        cursor: pointer;
+    }
 }
 
 %btnRosaClaro {
-    background: $color-backgrund;
+    background: $color-secndary-button;
     border: 1px solid $color-borderButton;
     box-shadow: inset -1px -1px 0 0 $color-shadow, inset 1px 1px 0 0 $color-white;
+    -webkit-box-shadow: inset -1px -1px 0 0 $color-shadow, inset 1px 1px 0 0 $color-white;
     padding: 7px;
     font-size: 14px;
     color: $color-borderButton;
@@ -22,12 +40,20 @@
     text-align: center;
     line-height: 18px;
     text-decoration: none;
+    &:hover{
+        border: 1px solid $color-borderButton;
+        outline: 1px dotted $color-borderButton;
+        outline-offset: -4px;
+        background-color: $color-input-shadow;
+        cursor: pointer;
+    }
 }
 
 %btnCaptured {
     background: $color-captured;
     border: 1px solid $color-dark;
     box-shadow: inset -1px -1px 0 0 $color-rosa-rojizo, inset 1px 1px 0 0 $color-white;
+    -webkit-box-shadow:inset -1px -1px 0 0 $color-rosa-rojizo, inset 1px 1px 0 0 $color-white;
     padding: 7px;
     font-size: 14px;
     color: $color-borderButton;
@@ -43,6 +69,7 @@
     background-color: $color-darkButton;
     border: solid 1px $color-borderButton;
     box-shadow: inset -1px -1px 0 0 $color-sadow-dark, inset 1px 1px 0 0 $color-white;
+    -webkit-box-shadow: inset -1px -1px 0 0 $color-sadow-dark, inset 1px 1px 0 0 $color-white;
     padding: 7px;
     font-size: 14px;
     color: $color-white;
@@ -50,12 +77,28 @@
     text-align: center;
     line-height: 18px;
     text-decoration: none;
+
+    &:hover{
+        border: 1px solid $color-borderButton;
+        outline: 1px dotted $color-borderButton;
+        outline-offset: -4px;
+        background-color: $color-hover-dark;
+        cursor: pointer;
+    }
+    &:active{
+        border: 1px solid $color-borderButton;
+        outline: 1px dotted $color-borderButton;
+        outline-offset: -4px;
+        background-color: $color-hover-dark;
+        cursor: pointer;
+    }
 }
 
 %btnGrisDark {
     background: $color-lightgray;
     border: 1px solid $color-borderDarkGray;
     box-shadow: inset -1px -1px 0 0 $color-borderDarkGray, inset 1px 1px 0 0 $color-white;
+    -webkit-box-shadow: inset -1px -1px 0 0 $color-borderDarkGray, inset 1px 1px 0 0 $color-white;
     height: 7px;
     padding: 10px;
     vertical-align: middle;
@@ -63,20 +106,11 @@
     color: $color-borderDarkGray;
 }
 
-%botonCerrarDark {
-    background-color: $color-lightgray;
-    box-shadow: inset -2px -2px 0 0 $color-borderDarkGray, inset 2px 2px 0 0 $color-white;
-    align-content: center;
-    padding: 7px;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-}
-
 %btnVerSugerenciasDark {
     background: $color-darkBlue;
     border: 1px solid $color-violeta;
     box-shadow: inset -2px -2px 0 0 $color-azul, inset 2px 2px 0 0 $color-white;
+    -webkit-box-shadow: inset -2px -2px 0 0 $color-azul, inset 2px 2px 0 0 $color-white;
     color: $color-white;
 }
 
@@ -90,17 +124,34 @@
     letter-spacing: 0;
     text-align: center;
     line-height: 18px;
+
+    &:hover{
+        border: 1px solid $color-white;
+        outline: 1px dotted $color-white;
+        outline-offset: -4px;
+        cursor: pointer;
+    }
+
 }
+ 
+
 
 %btnListoDark{
     background: $color-captured;
 border: 1px solid $color-borderButton;
 box-shadow: inset -1px -1px 0 0 $color-rosa-rojizo, inset 1px 1px 0 0 $color-white;
+-webkit-box-shadow: inset -1px -1px 0 0 $color-rosa-rojizo, inset 1px 1px 0 0 $color-white;
 font-size: 14px;
 padding: 7px;
 color: $color-white;
 letter-spacing: 0;
 text-align: center;
 line-height: 18px;
+}
+
+%hoverAzul{
+        background-color: $color-azul-hover;
+    outline: 1px dotted $color-borderButton;
+    outline-offset: -4px;
 }
 

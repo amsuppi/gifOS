@@ -4,6 +4,7 @@
         background: $color-input;
         border: 1px solid $color-darkBlue;
         box-shadow: inset -2px -2px 0 0 $color-gray, inset 2px 2px 0 0 $color-borderButton;
+        -webkit-box-shadow: inset -2px -2px 0 0 $color-gray, inset 2px 2px 0 0 $color-borderButton;
         font-size: 14px;
         font-weight: normal;
         color: $color-borderButton;
@@ -11,17 +12,15 @@
         margin-bottom: 10px;
         letter-spacing: 0;
     }
-
     .mis-gifos{
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+       
 
         .img-gifs{
             width: 280px;
             height: 280px;
-            margin-bottom: 20px;
+            margin: 10px;
         }
     }
 }

@@ -8,12 +8,7 @@ header {
         .crear-gifOS {
             margin-right: 5px;
             @extend %btnFucsia;
-            &:hover{
-                @extend %hoverFucsia;
-            }
-            &:active{
-                @extend %hoverFucsia;
-            }
+            
         }
         .theme{
             margin-right: 5px;
@@ -25,25 +20,11 @@ header {
                 @extend %btnFucsia;
                 width: 120px;
                 
-                &:hover{
-                    @extend %hoverFucsia;
-                }
-                &:active{
-                    @extend %hoverFucsia;
-                }
             }
             span{
                 @extend %btnFucsia;
                 
-                img{
-                    
-                }
-                &:hover{
-                    @extend %hoverFucsia;
-                }
-                &:active{
-                    @extend %hoverFucsia;
-                }
+               
             }
         }
 
@@ -69,9 +50,27 @@ header {
                 padding: 5px;
                 margin: 5px;
 
-                &:visited{
-                    color: $color-borderButton;
-                    text-decoration: none;
+                
+                &:active {
+                    background: $color-darkBlue ;
+                    border: 1px solid $color-borderButton ;
+                    box-shadow: inset -1px -1px 0 0 $color-input-shadow, inset 1px 1px 0 0 $color-white;
+                    font-size: 16px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                    // line-height: 22px;
+
+                }
+
+                &:hover {
+                    background: $color-darkBlue ;
+                    border: 1px solid $color-borderButton ;
+                    box-shadow: inset -1px -1px 0 0 $color-input-shadow, inset 1px 1px 0 0 $color-white;
+                    font-size: 16px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                    // line-height: 22px;
+
                 }
             }
         }
@@ -86,7 +85,7 @@ header {
             text-decoration: none;
 
             &::first-letter{
-                text-decoration: underline 1px $color-white;
+                text-decoration: underline $color-white;
             }
     
             &:hover{
