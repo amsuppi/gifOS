@@ -128,8 +128,8 @@ main .contenedorGris {
   display: block;
   width: 600px;
   background: #E6E6E6;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
   margin: auto;
 }
 
@@ -240,8 +240,8 @@ main .capturarVideo .pantallaProgress .barra-carga {
 
 main .capturarVideo .pantallaProgress .barra-carga .containerProgress {
   height: 18px;
+  animation: progress 5s infinite;
   -webkit-animation: progress 5s infinite;
-          animation: progress 5s infinite;
 }
 
 @-webkit-keyframes progress {
