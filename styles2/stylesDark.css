@@ -313,6 +313,7 @@ header .contenedor-buttons .crear-gifOS, header .contenedor-buttons .elegir-tema
   text-align: center;
   line-height: 18px;
   text-decoration: none;
+  outline: none;
 }
 
 header .contenedor-buttons .crear-gifOS:hover, header .contenedor-buttons .elegir-tema .btn-tema .tema:hover, header .contenedor-buttons .elegir-tema .btn-tema span:hover, main .contenedorGris .botones .btnComenzar:hover, main .capturarVideo .contenedorButtons .botones .btnCapturar img:hover, main .capturarVideo .contenedorButtons .botones .btnCapturar span:hover, main .capturarVideo .contenedorButtons .botones .subirgif:hover, .popup .contenedor-boton .btn-listo:hover {
@@ -341,6 +342,7 @@ main .contenedorGris .botones .btnCancelar, main .capturarVideo .contenedorButto
   padding: 7px 25px;
   letter-spacing: 0;
   text-align: center;
+  outline: none;
   line-height: 18px;
 }
 
@@ -361,6 +363,7 @@ main .capturarVideo .contenedorButtons .botones .cont-btn .bntListo img, main .c
   color: #FFFFFF;
   letter-spacing: 0;
   text-align: center;
+  outline: none;
   line-height: 18px;
 }
 

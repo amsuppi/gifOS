@@ -10,6 +10,7 @@
     text-align: center;
     line-height: 18px;
     text-decoration: none;
+    outline: none;
 
     &:hover{
         border: 1px solid $color-borderButton;
@@ -39,6 +40,7 @@
     letter-spacing: 0;
     text-align: center;
     line-height: 18px;
+    outline: none;
     text-decoration: none;
     &:hover{
         border: 1px solid $color-borderButton;
@@ -60,6 +62,7 @@
     letter-spacing: 0;
     text-align: center;
     line-height: 18px;
+    outline: none;
     text-decoration: none;
 }
 
@@ -77,6 +80,7 @@
     text-align: center;
     line-height: 18px;
     text-decoration: none;
+    outline: none;
 
     &:hover{
         border: 1px solid $color-borderButton;
@@ -102,6 +106,7 @@
     height: 7px;
     padding: 10px;
     vertical-align: middle;
+    outline: none;
     align-items: center;
     color: $color-borderDarkGray;
 }
@@ -112,6 +117,7 @@
     box-shadow: inset -2px -2px 0 0 $color-azul, inset 2px 2px 0 0 $color-white;
     -webkit-box-shadow: inset -2px -2px 0 0 $color-azul, inset 2px 2px 0 0 $color-white;
     color: $color-white;
+    outline: none;
 }
 
 %secondaryButton {
@@ -123,6 +129,7 @@
     padding: 7px 25px;
     letter-spacing: 0;
     text-align: center;
+    outline: none;
     line-height: 18px;
 
     &:hover{
@@ -146,6 +153,7 @@ padding: 7px;
 color: $color-white;
 letter-spacing: 0;
 text-align: center;
+outline: none;
 line-height: 18px;
 }
 
