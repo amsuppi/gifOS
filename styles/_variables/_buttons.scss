@@ -9,6 +9,7 @@
     text-align: center;
     line-height: 18px;
     text-decoration: none;
+    outline: none;
 
     &:hover{
         border: 1px solid $color-borderButton;
@@ -34,6 +35,7 @@
     padding: 5px;
     vertical-align: middle;
     align-items: center;
+    outline: none;
 }
 
 %botonCerrar {
@@ -43,6 +45,7 @@
     height: 15px;
     text-decoration: none;
     justify-content: center;
+    outline: none;
 }
 
 %btnVerSugerencias {
@@ -50,6 +53,7 @@
     border: 0.5px solid $color-violeta;
     box-shadow: inset -2px -2px 0 0 $color-azul, inset 2px 2px 0 0 $color-white;
     color: $color-white;
+    outline: none;
 
     &:hover{
         background-color: $color-azul-hover;
@@ -72,6 +76,7 @@
     text-align: center;
     line-height: 18px;
     text-decoration: none;
+    outline: none;
 
     &:hover{
         border: 1px solid $color-borderButton;
@@ -98,6 +103,7 @@
     vertical-align: middle;
     align-items: center;
     color: $color-borderDarkGray;
+    outline: none;
 }
 
 %botonCerrarDark {
@@ -108,6 +114,7 @@
     text-decoration: none;
     display: flex;
     justify-content: center;
+    outline: none;
 }
 
 %btnVerSugerenciasDark {
@@ -115,6 +122,7 @@
     border: 1px solid $color-violeta;
     box-shadow: inset -2px -2px 0 0 $color-azul, inset 2px 2px 0 0 $color-white;
     color: $color-white;
+    outline: none;
 
     &:hover{
         background-color: $color-azul-hover;

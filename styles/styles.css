@@ -125,6 +125,7 @@ header .contenedor-buttons .crear-gifOS, header .contenedor-buttons .theme .boto
   text-align: center;
   line-height: 18px;
   text-decoration: none;
+  outline: none;
 }
 
 header .contenedor-buttons .crear-gifOS:hover, header .contenedor-buttons .theme .botonDrop .button-dropdown:hover, header .contenedor-buttons .theme .botonDrop span:hover {
@@ -154,6 +155,7 @@ header .contenedor-buttons .crear-gifOS:active, header .contenedor-buttons .them
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  outline: none;
 }
 
 body .sugerencias .gif-sugerencias .vermas-sugerencias {
@@ -162,6 +164,7 @@ body .sugerencias .gif-sugerencias .vermas-sugerencias {
   -webkit-box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
   color: #FFFFFF;
+  outline: none;
 }
 
 body .sugerencias .gif-sugerencias .vermas-sugerencias:hover {
